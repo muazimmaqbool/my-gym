@@ -1,0 +1,22 @@
+import { StyleSheet, Text, View } from 'react-native'
+import React from 'react'
+
+import { Button } from 'react-native-paper'
+const App = () => {
+  return (
+    <View style={styles.container}>
+      <Text>Hello World</Text>
+      <Button mode="outlined" onPress={() => console.log('Pressed')}>Click Me!</Button>
+    </View>
+  )
+}
+
+export default App
+
+const styles = StyleSheet.create({
+    container:{
+        flex:1,
+        justifyContent: 'center',
+        alignItems: 'center',
+    }
+})
