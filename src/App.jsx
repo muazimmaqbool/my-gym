@@ -1,15 +1,33 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import React, { useState } from 'react'
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
+import FrontScreen from "../Components/FrontScreen"
+
+//making  native stack navigator instance
+const Stack = createNativeStackNavigator();
 
 import { Button } from 'react-native-paper'
 const App = () => {
   return (
-    <View style={styles.container}>
-      <Text>Hello World</Text>
-      <Button mode="outlined" onPress={() => console.log('Pressed')}>Click Me!</Button>
-    </View>
+   <NavigationContainer independent={true}>
+    <RootStack/>
+   </NavigationContainer>
   )
 }
+const RootStack = () => {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen 
+       name="Splash"
+       component={FrontScreen}
+       options={{
+         headerShown: false,
+       }}
+      />
+    </Stack.Navigator>
+  );
+};
 
 export default App
 

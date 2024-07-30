@@ -7,7 +7,7 @@ export default function TabLayout() {
  
   return (
     <PaperProvider>
-    <App />
+     <App />
   </PaperProvider>
   );
 }
