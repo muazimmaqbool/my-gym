@@ -5,10 +5,8 @@ import { Button } from "react-native-paper";
 const FrontScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>Hello World</Text>
-      <Button mode="outlined" onPress={() => console.log("Pressed")}>
-        Click Me!
-      </Button>
+      <Text>Front Screen</Text>
+      
     </View>
   );
 };
