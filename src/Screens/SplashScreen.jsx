@@ -8,7 +8,7 @@ export default function SplashScreen({navigation}) {
     <View style={styles.container}>
       <Image style={styles.image} alt="mainImage" source={splashScreenImg} />
       <Text style={styles.tagline}>
-        Welcome to your personal gym management system
+        Welcome to your personal gym management
       </Text>
       <Button mode="contained" icon={"application-export"} onPress={() =>{navigation.navigate("front")}}>
         Get Started
