@@ -1,7 +1,7 @@
 import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { Button } from "react-native-paper";
-const splashScreenImg=require("../../assets/images/splashScreen.png")
+const splashScreenImg=require("../../assets/images/splashScreen2.png")
 
 export default function SplashScreen({navigation}) {
   return (
@@ -22,14 +22,15 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    gap:30
+    gap:30,
+    padding:10,
   },
   image:{
-    width:365,
-    height:292,
+    width:"100%",
+    height:"50%",
   },
   tagline: {
-    margin: 20,
+    //margin: 20,
     fontWeight: "700",
     textAlign: "center",
     color: "#4F4F4F",
