@@ -4,6 +4,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import FrontScreen from "./Components/FrontScreen"
 import SplashScreen from "./Screens/SplashScreen"
+import HomeStack from "../src/Stacks/HomeStack"
 
 //making  native stack navigator instance
 const Stack = createNativeStackNavigator();
@@ -29,6 +30,13 @@ const RootStack = () => {
       <Stack.Screen 
        name="front"
        component={FrontScreen}
+       options={{
+         headerShown: false,
+       }}
+      />
+      <Stack.Screen 
+       name="homeStack"
+       component={HomeStack}
        options={{
          headerShown: false,
        }}
