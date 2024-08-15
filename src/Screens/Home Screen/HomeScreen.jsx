@@ -1,12 +1,23 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text, SafeAreaView, Platform } from "react-native";
+import React from "react";
+import { styles } from "./StyleHomeScreen";
 
 const HomeScreen = () => {
   return (
-    <View>
-      <Text>HomeScreen</Text>
-    </View>
-  )
-}
+    <SafeAreaView
+      style={styles.container
+        
+      }
+    >
+     <View style={styles.topBar}>
+      <Text style={styles.gymName}>Hi-Life Fitness</Text>
+      <Text style={styles.address}>Bilal Abad Sopore</Text>
+     </View>
+     <View style={styles.mainView}>
 
-export default HomeScreen
+     </View>
+    </SafeAreaView>
+  );
+};
+
+export default HomeScreen;

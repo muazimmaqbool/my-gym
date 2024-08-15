@@ -7,10 +7,12 @@ export default function SplashScreen({ navigation }) {
   return (
     <View style={styles.container}>
       <Image style={styles.image} alt="mainImage" source={splashScreenImg} />
-      <Text style={styles.tagline}>
-        Welcome to your personal gym management
-      </Text>
+      <View>
+        <Text style={styles.tagline}>Streamline Your Gym's Success</Text>
+        <Text style={[styles.tagline,styles.text]}>Manage & Grow</Text>
+      </View>
       <Button
+      buttonColor="#2563EB"
         contentStyle={{ flexDirection: "row-reverse" }}
         mode="contained"
         icon={"location-enter"}
@@ -35,7 +37,7 @@ export default function SplashScreen({ navigation }) {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: "center",
+    justifyContent: "flex-start",
     alignItems: "center",
     gap: 30,
     padding: 10,
@@ -45,10 +47,12 @@ const styles = StyleSheet.create({
     height: "50%",
   },
   tagline: {
-    //margin: 20,
     fontWeight: "700",
     textAlign: "center",
     color: "#4F4F4F",
     fontSize: 30,
   },
+  text:{
+    color:"#670066"
+  }
 });

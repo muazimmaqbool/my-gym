@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { StatusBar, StyleSheet, Text, View } from 'react-native'
 import React, { useState } from 'react'
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
@@ -13,6 +13,13 @@ import { Button } from 'react-native-paper'
 const App = () => {
   return (
    <NavigationContainer independent={true}>
+     <StatusBar
+        //={"#2563EB"}//only works on Android
+        barStyle={"light-content"} // try: defult, dark-content also
+        /*Note: default is white in android and black in ios
+                dark-content: dark color in both
+                ligh-content: white color in both*/
+      />
     <RootStack/>
    </NavigationContainer>
   )
