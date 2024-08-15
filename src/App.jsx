@@ -9,11 +9,10 @@ import HomeStack from "../src/Stacks/HomeStack"
 //making  native stack navigator instance
 const Stack = createNativeStackNavigator();
 
-import { Button } from 'react-native-paper'
 const App = () => {
   return (
    <NavigationContainer independent={true}>
-     <StatusBar
+    <StatusBar
         //={"#2563EB"}//only works on Android
         barStyle={"light-content"} // try: defult, dark-content also
         /*Note: default is white in android and black in ios
