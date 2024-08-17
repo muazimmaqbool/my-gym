@@ -5,8 +5,9 @@ import {
   Platform,
   Pressable,
   ImageBackground,
+  Animated
 } from "react-native";
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import { styles } from "./StyleHomeScreen";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import {
@@ -19,6 +20,35 @@ import {
 import homeBg from "../../../assets/images/homeBG3.jpg";
 
 const HomeScreen = ({ navigation }) => {
+
+  /*
+  ->main point of useRef is to persist a value across renders without causing a re-render 
+  when the value changes. 
+  In this case, it is used to create an animated value for each Pressable
+
+  ->new Animated.Value(200):creates a new animated value that represents the starting position below 200 vertically
+  */
+  const pressableAnimations = [
+    useRef(new Animated.Value(200)).current,
+    useRef(new Animated.Value(200)).current,
+    useRef(new Animated.Value(200)).current,
+    useRef(new Animated.Value(200)).current,
+    useRef(new Animated.Value(200)).current,
+  ];
+
+  useEffect(() => {
+    // Start the animations sequentially
+    pressableAnimations.forEach((anim, index) => {
+      //creates a spring-based animation that will move the Pressable from its initial position(200) to its final position(0)
+      Animated.spring(anim, {
+        toValue: 0,//final position
+        useNativeDriver: true, //improves performance by running the animation on the native UI thread rather than the JavaScript thread
+        delay: index * 100, // Delay each animation slightly to each pressable comp. so they don't animate together
+        //delay is calculated based on the index, so the first Pressable has no delay, the second has a delay of 100ms, the third 200ms, and so on
+      }).start();
+    });
+  }, [pressableAnimations]);
+  
   return (
     <SafeAreaView style={styles.container}>
       <ImageBackground
@@ -32,44 +62,61 @@ const HomeScreen = ({ navigation }) => {
         </View>
 
         <View style={styles.mainView}>
-          <Pressable style={styles.fieldContainer}
-          onPress={() => navigation.navigate("dashboard")}>
-            <MaterialIcons name="dashboard" size={24} color="#48BD69" />
-            <Text style={styles.fieldText}>Dashboard Overview</Text>
-          </Pressable>
+           <AnimatedPressable
+            animation={pressableAnimations[0]}
+            icon={<MaterialIcons name="dashboard" size={24} color="#48BD69" />}
+            text="Dashboard Overview"
+            onPress={() => navigation.navigate("dashboard")}
+          />
 
-          <Pressable style={styles.fieldContainer}
-          onPress={() => navigation.navigate("addMember")}>
-            <Ionicons name="person-add-sharp" size={24} color="#257CFF" />
-            <Text style={styles.fieldText}>New Admission</Text>
-          </Pressable>
+          <AnimatedPressable
+            animation={pressableAnimations[1]}
+            icon={
+              <Ionicons name="person-add-sharp" size={24} color="#257CFF" />
+            }
+            text="New Admission"
+            onPress={() => navigation.navigate("addMember")}
+          />
 
-          <Pressable style={styles.fieldContainer}
-          onPress={() => navigation.navigate("allMembers")}>
-            <Ionicons name="people" size={24} color="#48BD69" />
-            <Text style={styles.fieldText}>All Memebers</Text>
-          </Pressable>
+          <AnimatedPressable
+            animation={pressableAnimations[2]}
+            icon={<Ionicons name="people" size={24} color="#48BD69" />}
+            text="All Members"
+            onPress={() => navigation.navigate("allMembers")}
+          />
 
-          <Pressable style={styles.fieldContainer}
-          onPress={() => navigation.navigate("notifications")}>
-            <MaterialCommunityIcons
-              name="bell-alert"
-              size={24}
-              color="purple"
-            />
-            <Text style={styles.fieldText}>Notifications/Alerts</Text>
-          </Pressable>
+          <AnimatedPressable
+            animation={pressableAnimations[3]}
+            icon={
+              <MaterialCommunityIcons
+                name="bell-alert"
+                size={24}
+                color="purple"
+              />
+            }
+            text="Notifications/Alerts"
+            onPress={() => navigation.navigate("notifications")}
+          />
 
-          <Pressable
-            style={styles.fieldContainer}
+          <AnimatedPressable
+            animation={pressableAnimations[4]}
+            icon={<Ionicons name="settings" size={24} color="#172B85" />}
+            text="Settings"
             onPress={() => navigation.navigate("settings")}
-          >
-            <Ionicons name="settings" size={24} color="#172B85" />
-            <Text style={styles.fieldText}>Settings</Text>
-          </Pressable>
+          />
         </View>
       </ImageBackground>
     </SafeAreaView>
+  );
+};
+const AnimatedPressable = ({ animation, icon, text, onPress }) => {
+  return (
+    <Animated.View style={{ transform: [{ translateY: animation }] }}>
+      <Pressable style={styles.fieldContainer} onPress={onPress}>
+        {icon}
+        <Text style={styles.fieldText}>{text}</Text>
+      </Pressable>
+    </Animated.View>
   );
 };
 
