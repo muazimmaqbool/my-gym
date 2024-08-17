@@ -13,7 +13,7 @@ const App = () => {
   return (
    <NavigationContainer independent={true}>
     <StatusBar
-        //={"#2563EB"}//only works on Android
+        backgroundColor={"black"}//only works on Android //#2563EB
         barStyle={"light-content"} // try: defult, dark-content also
         /*Note: default is white in android and black in ios
                 dark-content: dark color in both

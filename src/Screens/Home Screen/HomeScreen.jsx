@@ -16,7 +16,7 @@ import {
   MaterialIcons,
   Octicons,
 } from "@expo/vector-icons";
-import homeBg from "../../../assets/images/homeBG2.jpg";
+import homeBg from "../../../assets/images/homeBG3.jpg";
 
 const HomeScreen = ({ navigation }) => {
   return (

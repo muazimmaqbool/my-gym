@@ -6,6 +6,7 @@ export const styles = StyleSheet.create({
     //justifyContent: "flex-start",
     alignItems: "stretch",
     backgroundColor: "#2563EB",
+    //backgroundColor:"#0098D1"
   },
   topBar: {
     height: "30%",
@@ -24,8 +25,8 @@ export const styles = StyleSheet.create({
   },
   bgImage:{
     flex:1,
-    opacity:1,
-  },
+    opacity:1
+   },
   mainView: {
     flex: 1,
     backgroundColor: "white",
