@@ -12,7 +12,7 @@ export default function SplashScreen({ navigation }) {
         <Text style={[styles.tagline,styles.text]}>Manage & Grow</Text>
       </View>
       <Button
-      buttonColor="#2563EB"
+      buttonColor="#3a86ff"
         contentStyle={{ flexDirection: "row-reverse" }}
         mode="contained"
         icon={"location-enter"}
