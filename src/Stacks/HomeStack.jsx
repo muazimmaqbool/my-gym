@@ -17,7 +17,7 @@ const HomeStack = () => {
       screenOptions={{
         headerTintColor: "white",
         headerStyle: {
-          backgroundColor: "#2563EB",
+          backgroundColor: "#3a86ff",
         },
         headerShadowVisible: false,
         headerBackTitleVisible: false,

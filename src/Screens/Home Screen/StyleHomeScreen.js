@@ -5,8 +5,7 @@ export const styles = StyleSheet.create({
     flex: 1,
     //justifyContent: "flex-start",
     alignItems: "stretch",
-    backgroundColor: "#2563EB",
-    //backgroundColor:"#0098D1"
+     backgroundColor: "#3a86ff",
   },
   topBar: {
     height: "30%",

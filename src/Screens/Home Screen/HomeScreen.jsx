@@ -51,11 +51,11 @@ const HomeScreen = ({ navigation }) => {
   
   return (
     <SafeAreaView style={styles.container}>
-      <ImageBackground
+      {/* <ImageBackground
         source={homeBg}
         resizeMode="cover"
         style={styles.bgImage}
-      >
+      > */}
         <View style={styles.topBar}>
           <Text style={styles.gymName}>Hi-Life Fitness</Text>
           <Text style={styles.address}>Bilal Abad Sopore</Text>
@@ -105,7 +105,7 @@ const HomeScreen = ({ navigation }) => {
             onPress={() => navigation.navigate("settings")}
           />
         </View>
-      </ImageBackground>
+      {/* </ImageBackground> */}
     </SafeAreaView>
   );
 };
