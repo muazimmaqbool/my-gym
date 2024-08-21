@@ -6,5 +6,14 @@ export const styles=StyleSheet.create({
         justifyContent: "flex-start",
         alignItems: "stretch",
         padding:15,
+        backgroundColor:"#FFFFFF"
       },
+      searchContainer:{
+        gap:10,
+      },
+      searchBtns:{
+        flexDirection:"row",
+        justifyContent:"flex-end",
+        gap:10
+      }
 })
