@@ -29,7 +29,20 @@ export const styles=StyleSheet.create({
         borderTopRightRadius:50,
         borderTopLeftRadius:50,
         borderWidth:2,
-        borderColor:"#DBDBDB"
+        borderColor:"#DBDBDB",
+      },
+      usersList:{
+        paddingHorizontal:20,
+        paddingTop:15,
+        gap:20,
+      },
+      userBox:{
+        flexDirection:"row",
+        alignItems:"flex-start",
+        gap:20,
+        //borderColor:"#DBDBDB",
+        //borderWidth:1,
+        
       }
 
 })
