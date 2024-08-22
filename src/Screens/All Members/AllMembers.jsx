@@ -18,13 +18,14 @@ const AllMembers = () => {
           right={<TextInput.Icon icon="account-search-outline" />}
           outlineColor="#3a86ff"
           activeOutlineColor="#3a86ff"
+          style={styles.textInput}
         />
         <Divider style={{ backgroundColor: "#DBDBDB", height: 1 }} />
         <View style={styles.searchBtns}>
           <Button
           outlineColor="#DBDBDB"
           textColor="#63676B"
-           mode="outlined"
+           mode="text"
             icon="sort-ascending"
             onPress={() => console.log("Pressed")}
           >
@@ -33,7 +34,7 @@ const AllMembers = () => {
           <Button
            outlineColor="#DBDBDB"
            textColor="#63676B"
-           mode="outlined"
+           mode="text"
             icon="filter-variant"
             onPress={() => console.log("Pressed")}
           >
@@ -41,6 +42,10 @@ const AllMembers = () => {
           </Button>
         </View>
       </View>
+
+      
+
+
     </View>
   );
 };
