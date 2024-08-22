@@ -20,7 +20,7 @@ const AllMembers = () => {
           activeOutlineColor="#3a86ff"
           style={styles.textInput}
         />
-        <Divider style={{ backgroundColor: "#DBDBDB", height: 1 }} />
+        
         <View style={styles.searchBtns}>
           <Button
           outlineColor="#DBDBDB"
@@ -42,9 +42,11 @@ const AllMembers = () => {
           </Button>
         </View>
       </View>
+      {/* <Divider style={{ backgroundColor: "#DBDBDB", height: 1 }} /> */}
 
-      
+      <View style={styles.userListContainer}>
 
+      </View>
 
     </View>
   );
