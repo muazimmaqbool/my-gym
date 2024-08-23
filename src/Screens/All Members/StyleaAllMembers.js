@@ -32,17 +32,35 @@ export const styles=StyleSheet.create({
         borderColor:"#DBDBDB",
       },
       usersList:{
-        paddingHorizontal:20,
-        paddingTop:15,
-        gap:20,
+        paddingHorizontal:30,
+        paddingVertical:20,
+        gap:25,
       },
       userBox:{
         flexDirection:"row",
         alignItems:"flex-start",
         gap:20,
-        //borderColor:"#DBDBDB",
-        //borderWidth:1,
+        borderBottomColor:"#DBDBDB",
+        borderBottomWidth:1,
+        paddingBottom:10
+      },
+      userInfo:{
         
+      },
+      name:{
+        color:"#1D1E25",
+        fontWeight:"700",
+        fontSize:17
+      },
+      demographic:{
+        color:"#808D9E",
+        fontSize:15,
+        fontWeight:"400"
+      },
+      address:{
+        color:"#808D9E",
+        fontSize:14,
+        fontWeight:"400"
       }
 
 })

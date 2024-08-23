@@ -46,16 +46,16 @@ const AllMembers = () => {
       </View>
       {/* <Divider style={{ backgroundColor: "#DBDBDB", height: 1 }} /> */}
 
-      <ScrollView style={styles.userListContainer}>
+      <ScrollView showsVerticalScrollIndicator={false} style={styles.userListContainer}>
         <View style={styles.usersList}>
           {users &&
             users.map((item, index) => (
               <Pressable key={index} style={styles.userBox}>
-                <Avatar.Image size={50} source={item.image} />
-                <View>
-                  <Text>{item.name}</Text>
-                  <Text>{item.age} Years Old {item.gender}</Text>
-                  <Text>{item.address}</Text>
+                <Avatar.Image size={60} source={item.image} />
+                <View style={styles.userInfo}>
+                  <Text style={styles.name}>{item.name}</Text>
+                  <Text style={styles.demographic}>{item.age} Years Old {item.gender}</Text>
+                  <Text style={styles.address}>{item.address}</Text>
                 </View>
               </Pressable>
             ))}
