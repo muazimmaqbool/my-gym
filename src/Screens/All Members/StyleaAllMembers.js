@@ -13,9 +13,12 @@ export const styles=StyleSheet.create({
         paddingTop:15,
         gap:5,
       },
+      topButtons:{
+        flexDirection:"row",
+        justifyContent:"space-between",
+      },
       searchBtns:{
         flexDirection:"row",
-        justifyContent:"flex-end",
       },
       textInput:{
         width:"100%",

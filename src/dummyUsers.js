@@ -17,21 +17,21 @@ const user=[
     },
     {
         name:"User Three",
-        adaddress:"chinkipora, sopore-bramulla",
+        address:"chinkipora, sopore-bramulla",
         age:40,
         gender:"Male",
         image:maleImg
     },
     {
         name:"User Four",
-        aaddress:"chinkipora, sopore-bramulla",
+        address:"chinkipora, sopore-bramulla",
         age:27,
         gender:"Male",
         image:maleImg
     },
     {
         name:"User Five",
-        aaddress:"chinkipora, sopore-bramulla",
+        address:"chinkipora, sopore-bramulla",
         age:22,
         gender:"Female",
         image:femaleImg
@@ -45,7 +45,7 @@ const user=[
     },
     {
         name:"User Seven",
-        adaddress:"chinkipora, sopore-bramulla",
+        address:"chinkipora, sopore-bramulla",
         age:15,
         gender:"Male",
         image:maleImg
@@ -59,14 +59,14 @@ const user=[
     },
     {
         name:"User Nine",
-        adaddress:"chinkipora, sopore-bramulla",
+        address:"chinkipora, sopore-bramulla",
         age:25,
         gender:"Male",
         image:maleImg
     },
     {
         name:"User Ten",
-        adaddress:"chinkipora, sopore-bramulla",
+        address:"chinkipora, sopore-bramulla",
         age:23,
         gender:"Female",
         image:femaleImg

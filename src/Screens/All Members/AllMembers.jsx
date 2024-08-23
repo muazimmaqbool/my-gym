@@ -4,7 +4,8 @@ import { styles } from "./StyleaAllMembers";
 import { Avatar, Button, Divider, TextInput } from "react-native-paper";
 import users from "../../dummyUsers";
 
-const AllMembers = () => {
+//called from HomeScreen and its navigated from HomeStack
+const AllMembers = ({navigation}) => {
   //console.log(users)
   const [searchText, setsearchText] = useState("");
   console.log("Search text", searchText);
@@ -23,30 +24,45 @@ const AllMembers = () => {
           style={styles.textInput}
         />
 
-        <View style={styles.searchBtns}>
+        <View style={styles.topButtons}>
           <Button
+          contentStyle={{ flexDirection: "row-reverse" }}
             outlineColor="#DBDBDB"
             textColor="#63676B"
             mode="text"
-            icon="sort-ascending"
-            onPress={() => console.log("Pressed")}
+            icon="account-plus-outline"
+            onPress={() => navigation.navigate("addMember")}
           >
-            Sort
+            Add New
           </Button>
-          <Button
-            outlineColor="#DBDBDB"
-            textColor="#63676B"
-            mode="text"
-            icon="filter-variant"
-            onPress={() => console.log("Pressed")}
-          >
-            Filter
-          </Button>
+          <View style={styles.searchBtns}>
+            <Button
+              outlineColor="#DBDBDB"
+              textColor="#63676B"
+              mode="text"
+              icon="sort-ascending"
+              onPress={() => console.log("Pressed")}
+            >
+              Sort
+            </Button>
+            <Button
+              outlineColor="#DBDBDB"
+              textColor="#63676B"
+              mode="text"
+              icon="filter-variant"
+              onPress={() => console.log("Pressed")}
+            >
+              Filter
+            </Button>
+          </View>
         </View>
       </View>
       {/* <Divider style={{ backgroundColor: "#DBDBDB", height: 1 }} /> */}
 
-      <ScrollView showsVerticalScrollIndicator={false} style={styles.userListContainer}>
+      <ScrollView
+        showsVerticalScrollIndicator={false}
+        style={styles.userListContainer}
+      >
         <View style={styles.usersList}>
           {users &&
             users.map((item, index) => (
@@ -54,7 +70,9 @@ const AllMembers = () => {
                 <Avatar.Image size={60} source={item.image} />
                 <View style={styles.userInfo}>
                   <Text style={styles.name}>{item.name}</Text>
-                  <Text style={styles.demographic}>{item.age} Years Old {item.gender}</Text>
+                  <Text style={styles.demographic}>
+                    {item.age} Years Old {item.gender}
+                  </Text>
                   <Text style={styles.address}>{item.address}</Text>
                 </View>
               </Pressable>
