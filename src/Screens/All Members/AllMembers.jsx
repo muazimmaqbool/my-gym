@@ -3,7 +3,6 @@ import React, { useState } from "react";
 import { styles } from "./StyleaAllMembers";
 import { Avatar, Button, Divider, TextInput } from "react-native-paper";
 import users from "../../dummyUsers";
-import testImg from "../../../assets/images/Test Images/imageFour.png";
 
 const AllMembers = () => {
   //console.log(users)
@@ -52,7 +51,7 @@ const AllMembers = () => {
           {users &&
             users.map((item, index) => (
               <Pressable key={index} style={styles.userBox}>
-                <Avatar.Image size={50} source={testImg} />
+                <Avatar.Image size={50} source={item.image} />
                 <View>
                   <Text>{item.name}</Text>
                   <Text>{item.age} Years Old {item.gender}</Text>
