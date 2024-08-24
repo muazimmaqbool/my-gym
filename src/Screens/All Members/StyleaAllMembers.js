@@ -64,6 +64,12 @@ export const styles=StyleSheet.create({
         color:"#808D9E",
         fontSize:14,
         fontWeight:"400"
+      },
+      noData:{
+        color:"#6B7280CC",
+        fontWeight:"500",
+        fontSize:17,
+        textAlign:"center"
       }
 
 })

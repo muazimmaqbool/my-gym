@@ -1,5 +1,5 @@
 import { View, Text, ScrollView, Pressable } from "react-native";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { styles } from "./StyleaAllMembers";
 import { Avatar, Button, Divider, TextInput } from "react-native-paper";
 import users from "../../dummyUsers";
@@ -8,13 +8,32 @@ import users from "../../dummyUsers";
 const AllMembers = ({navigation}) => {
   //console.log(users)
   const [searchText, setsearchText] = useState("");
-  console.log("Search text", searchText);
+  const [filteredUsers, setfilteredUsers] = useState([]);
+  //console.log("Search text", searchText);
+
+  const handleSearchText=(input)=>{
+    setsearchText(input)
+    if(input.length>0){
+      const filterUsers=users.filter((user)=>user?.first_name.toLowerCase().includes(input.toLowerCase()))
+      setfilteredUsers(filterUsers)
+    }else{
+      setfilteredUsers(users)
+    }
+  }
+  useEffect(()=>{
+    if(users.length>0){
+      console.log("running")
+      setfilteredUsers(users)
+      setsearchText("")
+    }
+  },[])
+
   return (
     <View style={styles.container}>
       <View style={styles.searchContainer}>
         <TextInput
           value={searchText}
-          onChangeText={(e) => setsearchText(e)}
+          onChangeText={handleSearchText}
           mode="outlined"
           label="Search Member"
           placeholder="Eg: Muazim Maqbool"
@@ -64,19 +83,20 @@ const AllMembers = ({navigation}) => {
         style={styles.userListContainer}
       >
         <View style={styles.usersList}>
-          {users &&
-            users.map((item, index) => (
+          {filteredUsers && filteredUsers.length>0 ? <>{
+             filteredUsers.map((item, index) => (
               <Pressable key={index} style={styles.userBox}>
                 <Avatar.Image size={60} source={item.image} />
                 <View style={styles.userInfo}>
-                  <Text style={styles.name}>{item.name}</Text>
+                  <Text style={styles.name}>{item.first_name} {item.last_name}</Text>
                   <Text style={styles.demographic}>
                     {item.age} Years Old {item.gender}
                   </Text>
                   <Text style={styles.address}>{item.address}</Text>
                 </View>
               </Pressable>
-            ))}
+            ))
+          }</>:<Text style={styles.noData}>No Member Found</Text>}
         </View>
       </ScrollView>
     </View>
