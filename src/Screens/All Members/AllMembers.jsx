@@ -85,7 +85,7 @@ const AllMembers = ({navigation}) => {
         <View style={styles.usersList}>
           {filteredUsers && filteredUsers.length>0 ? <>{
              filteredUsers.map((item, index) => (
-              <Pressable key={index} style={styles.userBox}>
+              <Pressable key={index} style={styles.userBox} onPress={()=>navigation.navigate("userProfile",{user:item})}>
                 <Avatar.Image size={60} source={item.image} />
                 <View style={styles.userInfo}>
                   <Text style={styles.name}>{item.first_name} {item.last_name}</Text>

@@ -8,6 +8,7 @@ import Dashboard from "../Screens/Dashboard/Dashboard"
 import AllMembers from "../Screens/All Members/AllMembers"
 import AddMember from "../Screens/New Admission/AddMember"
 import Notifcations from "../Screens/Notifications/Notifications"
+import UserProfile from "../Components/User Profile/UserProfile"
 
 const Stack = createNativeStackNavigator();
 
@@ -56,6 +57,16 @@ const HomeStack = () => {
         options={{
           headerShown: true,
           title: "Add New Member",
+          headerShadowVisible: false,
+          
+        }}
+      />
+      <Stack.Screen
+        name="userProfile"
+        component={UserProfile}
+        options={{
+          headerShown: true,
+          title: "All Members",
           headerShadowVisible: false,
           
         }}
