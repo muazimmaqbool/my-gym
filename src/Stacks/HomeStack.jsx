@@ -65,7 +65,7 @@ const HomeStack = () => {
         name="userProfile"
         component={UserProfile}
         options={{
-          headerShown: true,
+          headerShown: false,
           title: "All Members",
           headerShadowVisible: false,
           
