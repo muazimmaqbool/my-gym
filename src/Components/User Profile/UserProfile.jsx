@@ -5,6 +5,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import Feather from "@expo/vector-icons/Feather";
 import { Avatar } from "react-native-paper";
 
+
 const UserProfile = ({ navigation, route }) => {
   const { user } = route.params;
   //console.log("user recived:",user)

@@ -66,9 +66,6 @@ const HomeStack = () => {
         component={UserProfile}
         options={{
           headerShown: false,
-          title: "All Members",
-          headerShadowVisible: false,
-          
         }}
       />
        <Stack.Screen
