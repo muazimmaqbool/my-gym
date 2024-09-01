@@ -5,7 +5,7 @@ import Ionicons from "@expo/vector-icons/Ionicons";
 import Feather from "@expo/vector-icons/Feather";
 import { Avatar } from "react-native-paper";
 
-
+//called from UserProfile.jsx and its navigated in HomeStack.jsx
 const UserProfile = ({ navigation, route }) => {
   const { user } = route.params;
   //console.log("user recived:",user)
