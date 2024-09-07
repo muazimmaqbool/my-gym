@@ -17,9 +17,6 @@ export const styles=StyleSheet.create({
         flexDirection:"row",
         justifyContent:"space-between",
       },
-      searchBtns:{
-        flexDirection:"row",
-      },
       textInput:{
         width:"100%",
         height:40,
