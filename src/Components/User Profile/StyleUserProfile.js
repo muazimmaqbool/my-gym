@@ -51,4 +51,7 @@ export const styles=StyleSheet.create({
         paddingHorizontal: 30,
         
       },
+      mainTop:{
+        
+      }
 })

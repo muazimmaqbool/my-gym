@@ -35,7 +35,10 @@ const UserProfile = ({ navigation, route }) => {
         <Avatar.Image size={80} source={user.image} />
       </View>
       <View style={styles.mainView}>
+        <View style={styles.mainTop}></View>
+        <View style={styles.monthlyContainer}>
         
+        </View>
       </View>
     </SafeAreaView>
   );
