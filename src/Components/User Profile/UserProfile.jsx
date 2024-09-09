@@ -35,10 +35,17 @@ const UserProfile = ({ navigation, route }) => {
         <Avatar.Image size={80} source={user.image} />
       </View>
       <View style={styles.mainView}>
-        <View style={styles.mainTop}></View>
-        <View style={styles.monthlyContainer}>
-        
+        <View style={styles.mainTop}>
+          <View style={styles.topTextContainer}>
+            <Text style={styles.mainTopTitle}>Joining Date</Text>
+            <Text style={styles.joiningDate}>01 Jan 2024</Text>
+          </View>
+          <View style={styles.topTextContainer}>
+            <Text style={styles.mainTopTitle}>Current Satus</Text>
+            <Text style={styles.status}>Active</Text>
+          </View>
         </View>
+        <View style={styles.monthlyContainer}></View>
       </View>
     </SafeAreaView>
   );
