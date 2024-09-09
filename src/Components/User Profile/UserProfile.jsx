@@ -53,9 +53,10 @@ const UserProfile = ({ navigation, route }) => {
         </View>
 
         <View style={styles.currentMonth}>
-          <View>
-            <Text style={styles.monthText}>01 Sept 2024</Text>
-            <Text style={styles.validTill}>
+          <View style={styles.currFeeStatus}>
+            <Text style={styles.monthText}>01 Sept 2024 - </Text>
+            
+            <Text style={styles.monthText}>
               Valid Till <Text style={{ color: "#0284C7" }}>01 Aug 2024</Text>
             </Text>
           </View>

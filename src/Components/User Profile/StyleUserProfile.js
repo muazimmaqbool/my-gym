@@ -80,7 +80,7 @@ export const styles=StyleSheet.create({
         borderRadius:10,
         padding:15,
         flexDirection:"row",
-        justifyContent:"space-between",
+        justifyContent:"center",
         alignItems:"center",
         borderLeftColor:"#DBDBDB",
         borderRightColor:"#DBDBDB",
@@ -94,6 +94,12 @@ export const styles=StyleSheet.create({
         shadowRadius: 1, 
         elevation:1,
         shadowColor:"#DBDBDB40" ,
+      },
+      currFeeStatus:{
+        flexDirection:"row",
+        alignItems:"center",
+        justifyContent:"space-between"
+       // gap:15,
       },
       monthText:{
         fontWeight: "500",
