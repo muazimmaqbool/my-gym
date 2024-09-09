@@ -4,7 +4,7 @@ import { styles } from "./StyleUserProfile";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import Feather from "@expo/vector-icons/Feather";
 import { Avatar } from "react-native-paper";
-import formatDate from "../../Utilities/formatDate"
+import formatDate from "../../Utilities/formatDate";
 
 //called from AllMembers.jsx and its navigated in HomeStack.jsx
 const UserProfile = ({ navigation, route }) => {
@@ -12,13 +12,15 @@ const UserProfile = ({ navigation, route }) => {
   //console.log("user recived:",user)
   return (
     <SafeAreaView style={styles.container}>
-      <Pressable
-        onPress={() => navigation.navigate("allMembers")}
-        style={styles.arrowBack}
-      >
-        <Ionicons name="arrow-back" size={30} color="white" />
+      <View style={styles.arrowBack}>
+        <Ionicons
+          onPress={() => navigation.navigate("allMembers")}
+          name="arrow-back"
+          size={30}
+          color="white"
+        />
         <Feather name="edit" size={25} color="white" />
-      </Pressable>
+      </View>
       <View style={styles.topBar}>
         {user && (
           <>
@@ -35,17 +37,34 @@ const UserProfile = ({ navigation, route }) => {
       <View style={styles.userImg}>
         <Avatar.Image size={80} source={user.image} />
       </View>
+
       <View style={styles.mainView}>
         <View style={styles.mainTop}>
           <View style={styles.topTextContainer}>
             <Text style={styles.mainTopTitle}>Joining Date</Text>
-            <Text style={styles.joiningDate}>{formatDate.dateToDDMMYYYY(user.joiningDate)}</Text>
+            <Text style={styles.joiningDate}>
+              {formatDate.dateToDDMMYYYY(user.joiningDate)}
+            </Text>
           </View>
           <View style={styles.topTextContainer}>
             <Text style={styles.mainTopTitle}>Current Satus</Text>
             <Text style={styles.status}>Active</Text>
           </View>
         </View>
+
+        <View style={styles.currentMonth}>
+          <View>
+            <Text style={styles.monthText}>01 Sept 2024</Text>
+            <Text style={styles.validTill}>
+              Valid Till <Text style={{ color: "#0284C7" }}>01 Aug 2024</Text>
+            </Text>
+          </View>
+          {/* <View>
+            <Text style={styles.monthText}>Paid</Text>
+            <Text style={styles.fee}>₹1000</Text>
+          </View> */}
+        </View>
+
         <View style={styles.monthlyContainer}></View>
       </View>
     </SafeAreaView>

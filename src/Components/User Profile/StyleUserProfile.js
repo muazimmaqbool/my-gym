@@ -49,13 +49,14 @@ export const styles=StyleSheet.create({
         borderTopLeftRadius: 50,
         paddingVertical: 20,
         paddingHorizontal: 30,
-        
+        gap:20
       },
       mainTop:{
         flexDirection:"row",
         justifyContent: "space-between",
         alignItems:"center",
-        paddingHorizontal:15
+        paddingHorizontal:15,
+        
       },
       topTextContainer:{
         alignItems:"center"
@@ -74,5 +75,39 @@ export const styles=StyleSheet.create({
         fontWeight: "700",
         color: "#0284C7",
         fontSize: 13,
+      },
+      currentMonth:{
+        borderRadius:10,
+        padding:15,
+        flexDirection:"row",
+        justifyContent:"space-between",
+        alignItems:"center",
+        borderLeftColor:"#DBDBDB",
+        borderRightColor:"#DBDBDB",
+        borderBottomColor:"#DBDBDB",
+        borderLeftWidth:1,
+        borderRightWidth:1,
+        borderBottomWidth:1,
+
+        shadowOffset: { width: 1, height: 1 },
+        shadowOpacity: 0.8,
+        shadowRadius: 1, 
+        elevation:1,
+        shadowColor:"#DBDBDB40" ,
+      },
+      monthText:{
+        fontWeight: "500",
+        color: "#1D1E25",
+        fontSize: 16,
+      },
+      validTill:{
+        fontWeight: "500",
+        color: "#1D1E25",
+        fontSize: 14,
+      },
+      fee:{
+        fontWeight: "500",
+        color: "#0284C7",
+        fontSize: 14,
       }
 })
