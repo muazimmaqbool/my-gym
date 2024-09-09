@@ -4,6 +4,7 @@ import { styles } from "./StyleUserProfile";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import Feather from "@expo/vector-icons/Feather";
 import { Avatar } from "react-native-paper";
+import formatDate from "../../Utilities/formatDate"
 
 //called from AllMembers.jsx and its navigated in HomeStack.jsx
 const UserProfile = ({ navigation, route }) => {
@@ -38,7 +39,7 @@ const UserProfile = ({ navigation, route }) => {
         <View style={styles.mainTop}>
           <View style={styles.topTextContainer}>
             <Text style={styles.mainTopTitle}>Joining Date</Text>
-            <Text style={styles.joiningDate}>01 Jan 2024</Text>
+            <Text style={styles.joiningDate}>{formatDate.dateToDDMMYYYY(user.joiningDate)}</Text>
           </View>
           <View style={styles.topTextContainer}>
             <Text style={styles.mainTopTitle}>Current Satus</Text>
