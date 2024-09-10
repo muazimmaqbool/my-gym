@@ -49,7 +49,7 @@ export const styles=StyleSheet.create({
         borderTopLeftRadius: 50,
         paddingVertical: 20,
         paddingHorizontal: 30,
-        gap:20
+        gap:25
       },
       mainTop:{
         flexDirection:"row",
@@ -125,5 +125,40 @@ export const styles=StyleSheet.create({
         borderLeftColor:"#66B584",
         borderLeftWidth:5,
         padding:10
+      },
+      monthlyContainer:{
+        borderRadius:10,
+        paddingVertical:15,
+        paddingHorizontal:10,
+        flexDirection:"row",
+        flexWrap:"wrap",
+        justifyContent:"center",
+        alignItems:"flex-start",
+        gap:15,
+        borderLeftColor:"#DBDBDB",
+        borderRightColor:"#DBDBDB",
+        borderTopColor:"#DBDBDB",
+        borderLeftWidth:1,
+        borderRightWidth:1,
+        borderTopWidth:1,
+
+        shadowOffset: { width: 1, height: 1 },
+        shadowOpacity: 0.8,
+        shadowRadius: 1, 
+        elevation:1,
+        shadowColor:"#DBDBDB40" ,
+      },
+      monthBox:{
+        justifyContent:"center",
+        alignItems:"center",
+        padding:20,
+        borderWidth:1,
+        borderColor:"#DBDBDB",
+        borderRadius:10
+      },
+      monthName:{
+        fontWeight: "700",
+        color: "#1D1E25",
+        fontSize: 14,
       }
 })

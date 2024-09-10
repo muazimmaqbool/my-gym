@@ -10,6 +10,14 @@ import formatDate from "../../Utilities/formatDate";
 const UserProfile = ({ navigation, route }) => {
   const { user } = route.params;
   //console.log("user recived:",user)
+
+  const renderMonthBox=(label)=>{
+    return(
+      <View style={styles.monthBox}>
+        <Text style={styles.monthName}>{label}</Text>
+      </View>
+    )
+  }
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.arrowBack}>
@@ -73,7 +81,20 @@ const UserProfile = ({ navigation, route }) => {
           </View>
         </View>
 
-        <View style={styles.monthlyContainer}></View>
+        <View style={styles.monthlyContainer}>
+              {renderMonthBox("Jan")}
+              {renderMonthBox("Feb")}
+              {renderMonthBox("Mar")}
+              {renderMonthBox("Apr")}
+              {renderMonthBox("May")}
+              {renderMonthBox("Jun")}
+              {renderMonthBox("Jul")}
+              {renderMonthBox("Aug")}
+              {renderMonthBox("Sep")}
+              {renderMonthBox("Oct")}
+              {renderMonthBox("Nov")}
+              {renderMonthBox("Dec")}
+        </View>
       </View>
     </SafeAreaView>
   );
