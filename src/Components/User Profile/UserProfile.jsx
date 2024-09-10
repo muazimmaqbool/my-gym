@@ -48,21 +48,27 @@ const UserProfile = ({ navigation, route }) => {
           </View>
           <View style={styles.topTextContainer}>
             <Text style={styles.mainTopTitle}>Current Satus</Text>
-            <Text style={styles.status}>Active</Text>
+            <Text
+              style={[
+                styles.status,
+                { color: user.isActive ? "#0284C7" : "#F87171" },
+              ]}
+            >
+             {user.isActive ? "Active" : "Inactive"}
+            </Text>
           </View>
         </View>
 
         <View style={styles.currentMonth}>
           <View style={styles.currFeeStatus}>
             <Text style={styles.monthText}>01 Sept 2024 - </Text>
-            <Text style={styles.monthText}>
-              Valid Till 01 Aug 2024
-            </Text>
+            <Text style={styles.monthText}>Valid Till 01 Aug 2024</Text>
           </View>
           <View style={styles.amount}>
-            <Text style={styles.monthText}>Paid
+            <Text style={styles.monthText}>
+              Paid
               {": "}
-            <Text style={styles.fee}>₹1000</Text>
+              <Text style={styles.fee}>₹1000</Text>
             </Text>
           </View>
         </View>

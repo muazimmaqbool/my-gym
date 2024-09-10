@@ -10,6 +10,7 @@ const user = [
     image: maleImg,
     joiningDate: "01/01/2024",
     isActive: true,
+    currentMonthFee:"paid",
   },
   {
     first_name: "Saba",
