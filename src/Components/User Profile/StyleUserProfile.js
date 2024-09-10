@@ -78,10 +78,10 @@ export const styles=StyleSheet.create({
       },
       currentMonth:{
         borderRadius:10,
-        padding:15,
-        flexDirection:"row",
+        paddingVertical:15,
         justifyContent:"center",
         alignItems:"center",
+        gap:10,
         borderLeftColor:"#DBDBDB",
         borderRightColor:"#DBDBDB",
         borderBottomColor:"#DBDBDB",
@@ -115,5 +115,15 @@ export const styles=StyleSheet.create({
         fontWeight: "500",
         color: "#0284C7",
         fontSize: 14,
+      },
+      amount:{
+        width:"85%",
+        flexDirection:"row",
+        alignItems:"center",
+        justifyContent:"space-between",
+        backgroundColor:"#EDFCF2",
+        borderLeftColor:"#66B584",
+        borderLeftWidth:5,
+        padding:10
       }
 })

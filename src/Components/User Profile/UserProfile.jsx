@@ -55,15 +55,16 @@ const UserProfile = ({ navigation, route }) => {
         <View style={styles.currentMonth}>
           <View style={styles.currFeeStatus}>
             <Text style={styles.monthText}>01 Sept 2024 - </Text>
-            
             <Text style={styles.monthText}>
-              Valid Till <Text style={{ color: "#0284C7" }}>01 Aug 2024</Text>
+              Valid Till 01 Aug 2024
             </Text>
           </View>
-          {/* <View>
-            <Text style={styles.monthText}>Paid</Text>
+          <View style={styles.amount}>
+            <Text style={styles.monthText}>Paid
+              {": "}
             <Text style={styles.fee}>₹1000</Text>
-          </View> */}
+            </Text>
+          </View>
         </View>
 
         <View style={styles.monthlyContainer}></View>
