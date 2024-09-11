@@ -75,8 +75,6 @@ const UserProfile = ({ navigation, route }) => {
           <View style={styles.amount}>
             <Text style={styles.monthText}>
               Paid
-              {": "}
-              <Text style={styles.fee}>₹1000</Text>
             </Text>
           </View>
         </View>
