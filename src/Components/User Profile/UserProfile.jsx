@@ -91,10 +91,22 @@ const UserProfile = ({ navigation, route }) => {
           {renderMonthBox("Nov")}
           {renderMonthBox("Dec")}
         </View>
-        <View>
+        <View style={styles.buttomContainer}>
+          <View style={styles.lockerContainer}>
+            <View style={styles.locker}>
+              <Text style={styles.mainTopTitle}>Assigned Locker: 108</Text>
+            </View>
+            <Button
+              icon="archive-lock-outline"
+              mode="outlined"
+              onPress={() => console.log("Pressed")}
+            >
+              Remove Locker
+            </Button>
+          </View>
           <Button
-          contentStyle={{ flexDirection: "row-reverse" }}
-            mode="outlined"
+            contentStyle={{ flexDirection: "row-reverse" }}
+            mode="contained"
             icon="delete"
           >
             Remove User
