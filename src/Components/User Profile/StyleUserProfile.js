@@ -116,7 +116,7 @@ export const styles = StyleSheet.create({
     fontSize: 14,
   },
   amount: {
-    width: "85%",
+    width: "90%",
     flexDirection: "row",
     alignItems: "center",
     justifyContent: "space-between",
@@ -124,6 +124,11 @@ export const styles = StyleSheet.create({
     borderLeftColor: "#66B584",
     borderLeftWidth: 5,
     padding: 10,
+  },
+  subAmount:{
+    flexDirection:"row",
+    alignItems: "center",
+    gap:5
   },
   monthlyContainer: {
     borderRadius: 10,

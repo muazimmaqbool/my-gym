@@ -3,8 +3,9 @@ import React from "react";
 import { styles } from "./StyleUserProfile";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import Feather from "@expo/vector-icons/Feather";
-import { Avatar, Button } from "react-native-paper";
+import { Avatar, Button, Divider } from "react-native-paper";
 import formatDate from "../../Utilities/formatDate";
+import AntDesign from "@expo/vector-icons/AntDesign";
 
 //called from AllMembers.jsx and its navigated in HomeStack.jsx
 const UserProfile = ({ navigation, route }) => {
@@ -73,7 +74,14 @@ const UserProfile = ({ navigation, route }) => {
             <Text style={styles.monthText}>Valid Till 01 Aug 2024</Text>
           </View>
           <View style={styles.amount}>
-            <Text style={styles.monthText}>Paid</Text>
+            <View style={styles.subAmount}>
+              <Text style={styles.monthText}>Fee: Paid </Text>
+              <AntDesign name="checkcircle" size={24} color="#48BD69" />
+            </View>
+            <View style={styles.subAmount}>
+              <Text style={styles.monthText}>Locker: Paid </Text>
+              <AntDesign name="checkcircle" size={24} color="#48BD69" />
+            </View>
           </View>
         </View>
 
@@ -113,7 +121,7 @@ const UserProfile = ({ navigation, route }) => {
               mode="outlined"
               icon="locker-multiple"
             >
-             Assign Locker
+              Assign Locker
             </Button>
           )}
           <Button
