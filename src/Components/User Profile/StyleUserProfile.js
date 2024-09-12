@@ -60,7 +60,7 @@ export const styles = StyleSheet.create({
   topTextContainer: {
     alignItems: "center",
   },
-  mainTopTitle: {
+  miniBoldText: {
     fontWeight: "600",
     color: "#1D1E25",
     fontSize: 14,
@@ -75,6 +75,12 @@ export const styles = StyleSheet.create({
     color: "#0284C7",
     fontSize: 13,
   },
+  boldText: {
+    fontWeight: "500",
+    color: "#1D1E25",
+    fontSize: 16,
+  },
+
   currentMonth: {
     borderRadius: 10,
     paddingVertical: 15,
@@ -100,21 +106,7 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
     // gap:15,
   },
-  monthText: {
-    fontWeight: "500",
-    color: "#1D1E25",
-    fontSize: 16,
-  },
-  validTill: {
-    fontWeight: "500",
-    color: "#1D1E25",
-    fontSize: 14,
-  },
-  fee: {
-    fontWeight: "500",
-    color: "#0284C7",
-    fontSize: 14,
-  },
+
   amount: {
     width: "90%",
     flexDirection: "row",
@@ -182,4 +174,17 @@ export const styles = StyleSheet.create({
     borderLeftWidth: 5,
     padding: 10,
   },
+  feeModal:{
+    backgroundColor:"white",
+    width:"70%",
+    height:"40%",
+    alignSelf:"center",
+    padding:15,
+    borderRadius:20,
+  },
+  modalContentContainer:{
+    height:"100%",
+    justifyContent: "start",
+    alignItems:"center",
+  }
 });

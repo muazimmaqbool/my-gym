@@ -1,9 +1,9 @@
 import { Pressable, SafeAreaView, StyleSheet, Text, View } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import { styles } from "./StyleUserProfile";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import Feather from "@expo/vector-icons/Feather";
-import { Avatar, Button, Divider } from "react-native-paper";
+import { Avatar, Button, Divider, Modal } from "react-native-paper";
 import formatDate from "../../Utilities/formatDate";
 import AntDesign from "@expo/vector-icons/AntDesign";
 
@@ -12,13 +12,16 @@ const UserProfile = ({ navigation, route }) => {
   const { user } = route.params;
   //console.log("user recived:",user)
 
+  const [showModal, setshowModal] = useState(false);
+
   const renderMonthBox = (label) => {
     return (
-      <View style={styles.monthBox}>
+      <Pressable style={styles.monthBox} onPress={() => setshowModal(true)}>
         <Text style={styles.monthName}>{label}</Text>
-      </View>
+      </Pressable>
     );
   };
+
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.arrowBack}>
@@ -30,6 +33,7 @@ const UserProfile = ({ navigation, route }) => {
         />
         <Feather name="edit" size={25} color="white" />
       </View>
+
       <View style={styles.topBar}>
         {user && (
           <>
@@ -43,6 +47,7 @@ const UserProfile = ({ navigation, route }) => {
           </>
         )}
       </View>
+
       <View style={styles.userImg}>
         <Avatar.Image size={80} source={user.image} />
       </View>
@@ -50,13 +55,13 @@ const UserProfile = ({ navigation, route }) => {
       <View style={styles.mainView}>
         <View style={styles.mainTop}>
           <View style={styles.topTextContainer}>
-            <Text style={styles.mainTopTitle}>Joining Date</Text>
+            <Text style={styles.miniBoldText}>Joining Date</Text>
             <Text style={styles.joiningDate}>
               {formatDate.dateToDDMMYYYY(user.joiningDate)}
             </Text>
           </View>
           <View style={styles.topTextContainer}>
-            <Text style={styles.mainTopTitle}>Current Satus</Text>
+            <Text style={styles.miniBoldText}>Current Satus</Text>
             <Text
               style={[
                 styles.status,
@@ -70,16 +75,16 @@ const UserProfile = ({ navigation, route }) => {
 
         <View style={styles.currentMonth}>
           <View style={styles.currFeeStatus}>
-            <Text style={styles.monthText}>01 Sept 2024 - </Text>
-            <Text style={styles.monthText}>Valid Till 01 Aug 2024</Text>
+            <Text style={styles.miniBoldText}>01 Sept 2024 - </Text>
+            <Text style={styles.miniBoldText}>Valid Till 01 Aug 2024</Text>
           </View>
           <View style={styles.amount}>
             <View style={styles.subAmount}>
-              <Text style={styles.monthText}>Fee: Paid </Text>
+              <Text style={styles.boldText}>Fee: Paid </Text>
               <AntDesign name="checkcircle" size={24} color="#48BD69" />
             </View>
             <View style={styles.subAmount}>
-              <Text style={styles.monthText}>Locker: Paid </Text>
+              <Text style={styles.boldText}>Locker: Paid </Text>
               <AntDesign name="checkcircle" size={24} color="#48BD69" />
             </View>
           </View>
@@ -103,7 +108,7 @@ const UserProfile = ({ navigation, route }) => {
           {user.assignedLocker ? (
             <View style={styles.lockerContainer}>
               <View style={styles.locker}>
-                <Text style={styles.mainTopTitle}>
+                <Text style={styles.miniBoldText}>
                   Assigned Locker: {user.assignedLocker}
                 </Text>
               </View>
@@ -133,6 +138,16 @@ const UserProfile = ({ navigation, route }) => {
           </Button>
         </View>
       </View>
+
+      <Modal
+        visible={showModal}
+        onDismiss={() => setshowModal(false)}
+        contentContainerStyle={styles.feeModal}
+      >
+        <View style={styles.modalContentContainer}>
+          <Text style={styles.boldText}>Gym Fee</Text>
+        </View>
+      </Modal>
     </SafeAreaView>
   );
 };
