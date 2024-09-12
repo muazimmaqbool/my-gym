@@ -92,18 +92,30 @@ const UserProfile = ({ navigation, route }) => {
           {renderMonthBox("Dec")}
         </View>
         <View style={styles.buttomContainer}>
-          <View style={styles.lockerContainer}>
-            <View style={styles.locker}>
-              <Text style={styles.mainTopTitle}>Assigned Locker: 108</Text>
+          {user.assignedLocker ? (
+            <View style={styles.lockerContainer}>
+              <View style={styles.locker}>
+                <Text style={styles.mainTopTitle}>
+                  Assigned Locker: {user.assignedLocker}
+                </Text>
+              </View>
+              <Button
+                icon="archive-lock-outline"
+                mode="outlined"
+                onPress={() => console.log("Pressed")}
+              >
+                Remove Locker
+              </Button>
             </View>
+          ) : (
             <Button
-              icon="archive-lock-outline"
+              contentStyle={{ flexDirection: "row-reverse" }}
               mode="outlined"
-              onPress={() => console.log("Pressed")}
+              icon="locker-multiple"
             >
-              Remove Locker
+             Assign Locker
             </Button>
-          </View>
+          )}
           <Button
             contentStyle={{ flexDirection: "row-reverse" }}
             mode="contained"

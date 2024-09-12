@@ -1,5 +1,6 @@
 import femaleImg from "../assets/images/Test Images/female.png";
 import maleImg from "../assets/images/Test Images/male.jpg";
+
 const user = [
   {
     first_name: "Umar",
@@ -10,7 +11,8 @@ const user = [
     image: maleImg,
     joiningDate: "01/01/2024",
     isActive: true,
-    currentMonthFee:"paid",
+    currentMonthFee: "paid",
+    assignedLocker: 23,
   },
   {
     first_name: "Saba",
@@ -21,6 +23,7 @@ const user = [
     image: femaleImg,
     joiningDate: "15/02/2024",
     isActive: true,
+    assignedLocker: null,
   },
   {
     first_name: "Haseeb",
@@ -31,6 +34,7 @@ const user = [
     image: maleImg,
     joiningDate: "20/03/2024",
     isActive: false,
+    assignedLocker: 45,
   },
   {
     first_name: "Sahil",
@@ -41,6 +45,7 @@ const user = [
     image: maleImg,
     joiningDate: "10/04/2024",
     isActive: true,
+    assignedLocker: null,
   },
   {
     first_name: "Zeenat",
@@ -51,6 +56,7 @@ const user = [
     image: femaleImg,
     joiningDate: "05/05/2024",
     isActive: true,
+    assignedLocker: 32,
   },
   {
     first_name: "Rabia",
@@ -61,6 +67,7 @@ const user = [
     image: femaleImg,
     joiningDate: "17/06/2024",
     isActive: false,
+    assignedLocker: null,
   },
   {
     first_name: "Bilal",
@@ -71,6 +78,7 @@ const user = [
     image: maleImg,
     joiningDate: "08/07/2024",
     isActive: true,
+    assignedLocker: 57,
   },
   {
     first_name: "Aamir",
@@ -81,6 +89,7 @@ const user = [
     image: maleImg,
     joiningDate: "25/08/2024",
     isActive: true,
+    assignedLocker: null,
   },
   {
     first_name: "Amir",
@@ -91,6 +100,7 @@ const user = [
     image: maleImg,
     joiningDate: "10/09/2024",
     isActive: false,
+    assignedLocker: 68,
   },
   {
     first_name: "Insha",
@@ -101,6 +111,8 @@ const user = [
     image: femaleImg,
     joiningDate: "22/10/2024",
     isActive: true,
+    assignedLocker: null,
   },
 ];
+
 export default user;
