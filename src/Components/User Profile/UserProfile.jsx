@@ -75,10 +75,10 @@ const UserProfile = ({ navigation, route }) => {
         </View>
 
         <View style={styles.currentMonth}>
-          <View style={styles.currFeeStatus}>
+          {user.fee && <View style={styles.currFeeStatus}>
             <Text style={styles.miniBoldText}>01 Sept 2024 - </Text>
             <Text style={styles.miniBoldText}>Valid Till 01 Aug 2024</Text>
-          </View>
+          </View>}
           <View style={user.fee ? styles.amount : styles.amountNotPaid}>
             {user.fee ? (
               <>

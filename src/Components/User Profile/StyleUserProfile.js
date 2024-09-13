@@ -183,8 +183,9 @@ export const styles = StyleSheet.create({
   locker: {
     backgroundColor: "#EBF8FE",
     borderLeftColor: "#7DD3FC",
-    borderLeftWidth: 5,
+    borderLeftWidth: 6,
     padding: 10,
+    borderRadius:5
   },
   feeModal:{
     backgroundColor:"white",
