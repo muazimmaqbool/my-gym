@@ -13,6 +13,7 @@ const user = [
     isActive: true,
     currentMonthFee: "paid",
     assignedLocker: 23,
+    fee: true,
   },
   {
     first_name: "Saba",
@@ -24,6 +25,7 @@ const user = [
     joiningDate: "15/02/2024",
     isActive: true,
     assignedLocker: null,
+    fee: false,
   },
   {
     first_name: "Haseeb",
@@ -35,6 +37,7 @@ const user = [
     joiningDate: "20/03/2024",
     isActive: false,
     assignedLocker: 45,
+    fee: true,
   },
   {
     first_name: "Sahil",
@@ -46,6 +49,7 @@ const user = [
     joiningDate: "10/04/2024",
     isActive: true,
     assignedLocker: null,
+    fee: false,
   },
   {
     first_name: "Zeenat",
@@ -57,6 +61,7 @@ const user = [
     joiningDate: "05/05/2024",
     isActive: true,
     assignedLocker: 32,
+    fee: true,
   },
   {
     first_name: "Rabia",
@@ -68,6 +73,7 @@ const user = [
     joiningDate: "17/06/2024",
     isActive: false,
     assignedLocker: null,
+    fee: false,
   },
   {
     first_name: "Bilal",
@@ -79,6 +85,7 @@ const user = [
     joiningDate: "08/07/2024",
     isActive: true,
     assignedLocker: 57,
+    fee: true,
   },
   {
     first_name: "Aamir",
@@ -90,6 +97,7 @@ const user = [
     joiningDate: "25/08/2024",
     isActive: true,
     assignedLocker: null,
+    fee: false,
   },
   {
     first_name: "Amir",
@@ -101,6 +109,7 @@ const user = [
     joiningDate: "10/09/2024",
     isActive: false,
     assignedLocker: 68,
+    fee: true,
   },
   {
     first_name: "Insha",
@@ -112,6 +121,7 @@ const user = [
     joiningDate: "22/10/2024",
     isActive: true,
     assignedLocker: null,
+    fee: false,
   },
 ];
 

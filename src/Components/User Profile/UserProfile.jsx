@@ -16,9 +16,9 @@ const UserProfile = ({ navigation, route }) => {
 
   const renderMonthBox = (label) => {
     return (
-      <Pressable style={styles.monthBox} onPress={() => setshowModal(true)}>
+      <View style={styles.monthBox}>
         <Text style={styles.monthName}>{label}</Text>
-      </Pressable>
+      </View>
     );
   };
 
@@ -78,16 +78,21 @@ const UserProfile = ({ navigation, route }) => {
             <Text style={styles.miniBoldText}>01 Sept 2024 - </Text>
             <Text style={styles.miniBoldText}>Valid Till 01 Aug 2024</Text>
           </View>
-          <View style={styles.amount}>
-            <View style={styles.subAmount}>
-              <Text style={styles.boldText}>Fee: Paid </Text>
-              <AntDesign name="checkcircle" size={24} color="#48BD69" />
+
+          {user.fee ? (
+            <View style={styles.amount}>
+              <View style={styles.subAmount}>
+                <Text style={styles.boldText}>Fee: Paid </Text>
+                <AntDesign name="checkcircle" size={24} color="#48BD69" />
+              </View>
+              <View style={styles.subAmount}>
+                <Text style={styles.boldText}>Locker: Paid </Text>
+                <AntDesign name="checkcircle" size={24} color="#48BD69" />
+              </View>
             </View>
-            <View style={styles.subAmount}>
-              <Text style={styles.boldText}>Locker: Paid </Text>
-              <AntDesign name="checkcircle" size={24} color="#48BD69" />
-            </View>
-          </View>
+          ) : (
+            <></>
+          )}
         </View>
 
         <View style={styles.monthlyContainer}>
