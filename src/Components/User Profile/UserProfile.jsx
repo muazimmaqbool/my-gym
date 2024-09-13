@@ -6,6 +6,7 @@ import Feather from "@expo/vector-icons/Feather";
 import { Avatar, Button, Divider, Modal } from "react-native-paper";
 import formatDate from "../../Utilities/formatDate";
 import AntDesign from "@expo/vector-icons/AntDesign";
+import { MaterialIcons } from "@expo/vector-icons";
 
 //called from AllMembers.jsx and its navigated in HomeStack.jsx
 const UserProfile = ({ navigation, route }) => {
@@ -78,21 +79,33 @@ const UserProfile = ({ navigation, route }) => {
             <Text style={styles.miniBoldText}>01 Sept 2024 - </Text>
             <Text style={styles.miniBoldText}>Valid Till 01 Aug 2024</Text>
           </View>
-
-          {user.fee ? (
-            <View style={styles.amount}>
-              <View style={styles.subAmount}>
-                <Text style={styles.boldText}>Fee: Paid </Text>
-                <AntDesign name="checkcircle" size={24} color="#48BD69" />
-              </View>
-              <View style={styles.subAmount}>
-                <Text style={styles.boldText}>Locker: Paid </Text>
-                <AntDesign name="checkcircle" size={24} color="#48BD69" />
-              </View>
-            </View>
-          ) : (
-            <></>
-          )}
+          <View style={user.fee ? styles.amount : styles.amountNotPaid}>
+            {user.fee ? (
+              <>
+                <View style={styles.subAmount}>
+                  <Text style={styles.boldText}>Fee: Paid </Text>
+                  <AntDesign name="checkcircle" size={24} color="#48BD69" />
+                </View>
+                <View style={styles.subAmount}>
+                  <Text style={styles.boldText}>Locker: Paid </Text>
+                  <AntDesign name="checkcircle" size={24} color="#48BD69" />
+                </View>
+              </>
+            ) : (
+              <>
+                <View style={styles.subAmount}>
+                  <Text style={styles.boldText}>Fee: Not Paid </Text>
+                  <MaterialIcons name="error" size={24} color="#E63535" />
+                </View>
+                <Button
+                  mode="contained"
+                  buttonColor="#3a86ff"
+                >
+                  Pay Now
+                </Button>
+              </>
+            )}
+          </View>
         </View>
 
         <View style={styles.monthlyContainer}>
@@ -138,6 +151,7 @@ const UserProfile = ({ navigation, route }) => {
             contentStyle={{ flexDirection: "row-reverse" }}
             mode="contained"
             icon="delete"
+            buttonColor="#3a86ff"
           >
             Remove User
           </Button>

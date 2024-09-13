@@ -114,8 +114,20 @@ export const styles = StyleSheet.create({
     justifyContent: "space-between",
     backgroundColor: "#EDFCF2",
     borderLeftColor: "#66B584",
-    borderLeftWidth: 5,
+    borderLeftWidth: 6,
     padding: 10,
+    borderRadius:5
+  },
+  amountNotPaid:{
+    width: "90%",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: "space-between",
+    backgroundColor: "#FEF1F1",
+    borderLeftColor: "#F87171",
+    borderLeftWidth: 6,
+    padding: 10,
+    borderRadius:5
   },
   subAmount:{
     flexDirection:"row",
