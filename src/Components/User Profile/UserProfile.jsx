@@ -94,7 +94,7 @@ const UserProfile = ({ navigation, route }) => {
             ) : (
               <>
                 <View style={styles.subAmount}>
-                  <Text style={styles.boldText}>Fee: Not Paid </Text>
+                  <Text style={styles.boldText}>Fee: Not Paid Yet </Text>
                   <MaterialIcons name="error" size={24} color="#E63535" />
                 </View>
                 <Button
