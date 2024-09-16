@@ -1,4 +1,11 @@
-import { Pressable, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
+import {
+  Pressable,
+  SafeAreaView,
+  StyleSheet,
+  Text,
+  TouchableOpacity,
+  View,
+} from "react-native";
 import React, { useState } from "react";
 import { styles } from "./StyleUserProfile";
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -14,6 +21,7 @@ const UserProfile = ({ navigation, route }) => {
   //console.log("user recived:",user)
 
   const [showModal, setshowModal] = useState(false);
+  const [monthsPaid, setmonthsPaid] = useState([]);
 
   const renderMonthBox = (label) => {
     return (
@@ -22,13 +30,13 @@ const UserProfile = ({ navigation, route }) => {
       </View>
     );
   };
-  const renderModalMonth=(label)=>{
-    return(
+  const renderModalMonth = (label) => {
+    return (
       <TouchableOpacity style={styles.monthModalBox}>
         <Text style={styles.monthName}>{label}</Text>
       </TouchableOpacity>
-    )
-  }
+    );
+  };
 
   return (
     <SafeAreaView style={styles.container}>
@@ -82,10 +90,12 @@ const UserProfile = ({ navigation, route }) => {
         </View>
 
         <View style={styles.currentMonth}>
-          {user.fee && <View style={styles.currFeeStatus}>
-            <Text style={styles.miniBoldText}>01 Sept 2024 - </Text>
-            <Text style={styles.miniBoldText}>Valid Till 01 Aug 2024</Text>
-          </View>}
+          {user.fee && (
+            <View style={styles.currFeeStatus}>
+              <Text style={styles.miniBoldText}>01 Sept 2024 - </Text>
+              <Text style={styles.miniBoldText}>Valid Till 01 Aug 2024</Text>
+            </View>
+          )}
           <View style={user.fee ? styles.amount : styles.amountNotPaid}>
             {user.fee ? (
               <>
@@ -174,18 +184,26 @@ const UserProfile = ({ navigation, route }) => {
         <View style={styles.modalContentContainer}>
           <Text style={styles.boldText}>Gym Fee</Text>
           <View style={styles.monthModalContainer}>
-          {renderModalMonth("Jan")}
-          {renderModalMonth("Feb")}
-          {renderModalMonth("Mar")}
-          {renderModalMonth("Apr")}
-          {renderModalMonth("May")}
-          {renderModalMonth("Jun")}
-          {renderModalMonth("Jul")}
-          {renderModalMonth("Aug")}
-          {renderModalMonth("Sep")}
-          {renderModalMonth("Oct")}
-          {renderModalMonth("Nov")}
-          {renderModalMonth("Dec")}
+            {renderModalMonth("Jan")}
+            {renderModalMonth("Feb")}
+            {renderModalMonth("Mar")}
+            {renderModalMonth("Apr")}
+            {renderModalMonth("May")}
+            {renderModalMonth("Jun")}
+            {renderModalMonth("Jul")}
+            {renderModalMonth("Aug")}
+            {renderModalMonth("Sep")}
+            {renderModalMonth("Oct")}
+            {renderModalMonth("Nov")}
+            {renderModalMonth("Dec")}
+          </View>
+          <View style={styles.modalButtons}>
+            <Button mode="outlined">
+              Back
+            </Button>
+            <Button mode="contained" buttonColor="#3a86ff">
+              Save
+            </Button>
           </View>
         </View>
       </Modal>

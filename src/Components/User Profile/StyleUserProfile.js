@@ -216,4 +216,10 @@ export const styles = StyleSheet.create({
     borderColor: "#DBDBDB",
     borderRadius: 10,
   },
+  modalButtons:{
+    width:"90%",
+    flexDirection:"row",
+    alignItems: "center",
+    justifyContent:"space-between",
+  }
 });
