@@ -216,6 +216,12 @@ export const styles = StyleSheet.create({
     borderColor: "#DBDBDB",
     borderRadius: 10,
   },
+  selectedMonth:{
+    backgroundColor:"#3a86ff"
+  },
+  selectedText:{
+    color: "#FFFFFF",
+  },
   modalButtons:{
     width:"90%",
     flexDirection:"row",

@@ -22,6 +22,15 @@ const UserProfile = ({ navigation, route }) => {
 
   const [showModal, setshowModal] = useState(false);
   const [monthsPaid, setmonthsPaid] = useState([]);
+  //console.log("months paid",monthsPaid)
+
+  const handleMonthsPay= (month) => {
+    if (monthsPaid.includes(month)) {
+      setmonthsPaid(monthsPaid.filter((t) => t !== month)); // Deselect
+    } else {
+      setmonthsPaid([...monthsPaid, month]); // Select
+    }
+  };
 
   const renderMonthBox = (label) => {
     return (
@@ -32,8 +41,11 @@ const UserProfile = ({ navigation, route }) => {
   };
   const renderModalMonth = (label) => {
     return (
-      <TouchableOpacity style={styles.monthModalBox}>
-        <Text style={styles.monthName}>{label}</Text>
+      <TouchableOpacity
+        style={[styles.monthModalBox,monthsPaid.includes(label) && styles.selectedMonth]}
+        onPress={() =>handleMonthsPay(label)}
+      >
+        <Text style={[styles.monthName,monthsPaid.includes(label) && styles.selectedText]}>{label}</Text>
       </TouchableOpacity>
     );
   };
@@ -198,9 +210,7 @@ const UserProfile = ({ navigation, route }) => {
             {renderModalMonth("Dec")}
           </View>
           <View style={styles.modalButtons}>
-            <Button mode="outlined">
-              Back
-            </Button>
+            <Button mode="outlined">Back</Button>
             <Button mode="contained" buttonColor="#3a86ff">
               Save
             </Button>
