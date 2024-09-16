@@ -116,9 +116,9 @@ export const styles = StyleSheet.create({
     borderLeftColor: "#66B584",
     borderLeftWidth: 6,
     padding: 10,
-    borderRadius:5
+    borderRadius: 5,
   },
-  amountNotPaid:{
+  amountNotPaid: {
     width: "90%",
     flexDirection: "row",
     alignItems: "center",
@@ -127,12 +127,12 @@ export const styles = StyleSheet.create({
     borderLeftColor: "#F87171",
     borderLeftWidth: 6,
     padding: 10,
-    borderRadius:5
+    borderRadius: 5,
   },
-  subAmount:{
-    flexDirection:"row",
+  subAmount: {
+    flexDirection: "row",
     alignItems: "center",
-    gap:5
+    gap: 5,
   },
   monthlyContainer: {
     borderRadius: 10,
@@ -185,19 +185,35 @@ export const styles = StyleSheet.create({
     borderLeftColor: "#7DD3FC",
     borderLeftWidth: 6,
     padding: 10,
-    borderRadius:5
+    borderRadius: 5,
   },
-  feeModal:{
-    backgroundColor:"white",
-    width:"70%",
-    height:"40%",
-    alignSelf:"center",
-    padding:15,
-    borderRadius:20,
+  feeModal: {
+    backgroundColor: "white",
+    width: "80%",
+    height: "40%",
+    alignSelf: "center",
+    padding: 15,
+    borderRadius: 20,
   },
-  modalContentContainer:{
-    height:"100%",
+  modalContentContainer: {
+    height: "100%",
     justifyContent: "start",
-    alignItems:"center",
-  }
+    alignItems: "center",
+    gap:15
+  },
+  monthModalContainer: {
+    flexDirection: "row",
+    alignItems: "center",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    gap: 12,
+  },
+  monthModalBox: {
+    justifyContent: "center",
+    alignItems: "center",
+    padding: 15,
+    borderWidth: 1,
+    borderColor: "#DBDBDB",
+    borderRadius: 10,
+  },
 });

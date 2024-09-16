@@ -1,4 +1,4 @@
-import { Pressable, SafeAreaView, StyleSheet, Text, View } from "react-native";
+import { Pressable, SafeAreaView, StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React, { useState } from "react";
 import { styles } from "./StyleUserProfile";
 import Ionicons from "@expo/vector-icons/Ionicons";
@@ -22,6 +22,13 @@ const UserProfile = ({ navigation, route }) => {
       </View>
     );
   };
+  const renderModalMonth=(label)=>{
+    return(
+      <TouchableOpacity style={styles.monthModalBox}>
+        <Text style={styles.monthName}>{label}</Text>
+      </TouchableOpacity>
+    )
+  }
 
   return (
     <SafeAreaView style={styles.container}>
@@ -100,6 +107,7 @@ const UserProfile = ({ navigation, route }) => {
                 <Button
                   mode="contained"
                   buttonColor="#3a86ff"
+                  onPress={() => setshowModal(true)}
                 >
                   Pay Now
                 </Button>
@@ -165,6 +173,20 @@ const UserProfile = ({ navigation, route }) => {
       >
         <View style={styles.modalContentContainer}>
           <Text style={styles.boldText}>Gym Fee</Text>
+          <View style={styles.monthModalContainer}>
+          {renderModalMonth("Jan")}
+          {renderModalMonth("Feb")}
+          {renderModalMonth("Mar")}
+          {renderModalMonth("Apr")}
+          {renderModalMonth("May")}
+          {renderModalMonth("Jun")}
+          {renderModalMonth("Jul")}
+          {renderModalMonth("Aug")}
+          {renderModalMonth("Sep")}
+          {renderModalMonth("Oct")}
+          {renderModalMonth("Nov")}
+          {renderModalMonth("Dec")}
+          </View>
         </View>
       </Modal>
     </SafeAreaView>
