@@ -229,5 +229,9 @@ export const styles = StyleSheet.create({
     alignItems: "center",
     justifyContent:"center",
     gap:20
+  },
+  monthPaid:{
+    backgroundColor: "#EDFCF2",
+   // borderLeftColor: "#66B584",
   }
 });

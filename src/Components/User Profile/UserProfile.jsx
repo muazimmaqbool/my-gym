@@ -36,7 +36,7 @@ const UserProfile = ({ navigation, route }) => {
 
   const renderMonthBox = (label) => {
     return (
-      <View style={styles.monthBox}>
+      <View style={[styles.monthBox,styles.monthPaid]}>
         <Text style={styles.monthName}>{label}</Text>
       </View>
     );
