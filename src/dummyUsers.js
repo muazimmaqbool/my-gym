@@ -37,7 +37,7 @@ const user = [
     joiningDate: "20/03/2024",
     isActive: false,
     assignedLocker: 45,
-    fee: true,
+    fee: false,
   },
   {
     first_name: "Sahil",

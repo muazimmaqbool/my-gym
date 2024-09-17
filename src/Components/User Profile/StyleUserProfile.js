@@ -192,14 +192,14 @@ export const styles = StyleSheet.create({
     marginTop:15,
     backgroundColor: "white",
     width: "80%",
-    height: "45%",
+    height:"45%",
     alignSelf: "center",
     padding: 15,
     borderRadius: 20,
   },
   modalContentContainer: {
     height: "100%",
-    justifyContent: "start",
+    justifyContent: "space-between",
     alignItems: "center",
     gap:10
   },

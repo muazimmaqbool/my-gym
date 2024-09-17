@@ -221,13 +221,15 @@ const UserProfile = ({ navigation, route }) => {
             {renderModalMonth("Nov")}
             {renderModalMonth("Dec")}
           </View>
-          <View style={[styles.modalButtons,{gap:5}]}>
-            <Text style={styles.miniBoldText}>Including Locker Fee:</Text>
-            <Switch
-              value={includeLockerFee}
-              onValueChange={() => setincludeLockerFee(!includeLockerFee)}
-            />
-          </View>
+          {user.assignedLocker && (
+            <View style={[styles.modalButtons, { gap: 5 }]}>
+              <Text style={styles.miniBoldText}>Including Locker Fee:</Text>
+              <Switch
+                value={includeLockerFee}
+                onValueChange={() => setincludeLockerFee(!includeLockerFee)}
+              />
+            </View>
+          )}
           <View style={styles.modalButtons}>
             <Button mode="outlined" onPress={() => setshowModal(false)}>
               Back
