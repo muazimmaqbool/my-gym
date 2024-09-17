@@ -10,7 +10,7 @@ import React, { useState } from "react";
 import { styles } from "./StyleUserProfile";
 import Ionicons from "@expo/vector-icons/Ionicons";
 import Feather from "@expo/vector-icons/Feather";
-import { Avatar, Button, Divider, Modal } from "react-native-paper";
+import { Avatar, Button, Divider, Modal, Switch } from "react-native-paper";
 import formatDate from "../../Utilities/formatDate";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import { MaterialIcons } from "@expo/vector-icons";
@@ -23,6 +23,8 @@ const UserProfile = ({ navigation, route }) => {
   const [showModal, setshowModal] = useState(false);
   const [monthsPaid, setmonthsPaid] = useState([]);
   //console.log("months paid",monthsPaid)
+  const [includeLockerFee, setincludeLockerFee] = useState(false);
+  //console.log("includelockerfee",includeLockerFee)
 
   const handleMonthsPay = (month) => {
     if (monthsPaid.includes(month)) {
@@ -204,7 +206,7 @@ const UserProfile = ({ navigation, route }) => {
         contentContainerStyle={styles.feeModal}
       >
         <View style={styles.modalContentContainer}>
-          <Text style={styles.boldText}>Gym Fee</Text>
+          <Text style={styles.boldText}>Gym Fee Of Month</Text>
           <View style={styles.monthModalContainer}>
             {renderModalMonth("Jan")}
             {renderModalMonth("Feb")}
@@ -218,6 +220,13 @@ const UserProfile = ({ navigation, route }) => {
             {renderModalMonth("Oct")}
             {renderModalMonth("Nov")}
             {renderModalMonth("Dec")}
+          </View>
+          <View style={[styles.modalButtons,{gap:5}]}>
+            <Text style={styles.miniBoldText}>Including Locker Fee:</Text>
+            <Switch
+              value={includeLockerFee}
+              onValueChange={() => setincludeLockerFee(!includeLockerFee)}
+            />
           </View>
           <View style={styles.modalButtons}>
             <Button mode="outlined" onPress={() => setshowModal(false)}>

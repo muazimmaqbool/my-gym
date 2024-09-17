@@ -188,9 +188,11 @@ export const styles = StyleSheet.create({
     borderRadius: 5,
   },
   feeModal: {
+    zIndex:5,
+    marginTop:15,
     backgroundColor: "white",
     width: "80%",
-    height: "40%",
+    height: "45%",
     alignSelf: "center",
     padding: 15,
     borderRadius: 20,
@@ -199,7 +201,7 @@ export const styles = StyleSheet.create({
     height: "100%",
     justifyContent: "start",
     alignItems: "center",
-    gap:15
+    gap:10
   },
   monthModalContainer: {
     flexDirection: "row",
@@ -223,7 +225,6 @@ export const styles = StyleSheet.create({
     color: "#FFFFFF",
   },
   modalButtons:{
-    width:"90%",
     flexDirection:"row",
     alignItems: "center",
     justifyContent:"center",
