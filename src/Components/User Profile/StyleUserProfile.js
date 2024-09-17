@@ -226,6 +226,7 @@ export const styles = StyleSheet.create({
     width:"90%",
     flexDirection:"row",
     alignItems: "center",
-    justifyContent:"space-between",
+    justifyContent:"center",
+    gap:20
   }
 });
