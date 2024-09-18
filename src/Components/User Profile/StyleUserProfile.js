@@ -231,7 +231,8 @@ export const styles = StyleSheet.create({
     gap:20
   },
   monthPaid:{
-    backgroundColor: "#EDFCF2",
+   // backgroundColor: "#EDFCF2",
    // borderLeftColor: "#66B584",
+   backgroundColor:"#8DE88D"
   }
 });
