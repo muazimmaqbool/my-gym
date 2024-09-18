@@ -14,6 +14,7 @@ const user = [
     currentMonthFee: "paid",
     assignedLocker: 23,
     fee: true,
+    monthsPaid: [0, 1, 2, 3], // Paid for Jan, Feb, Mar, Apr
   },
   {
     first_name: "Saba",
@@ -26,6 +27,7 @@ const user = [
     isActive: true,
     assignedLocker: null,
     fee: false,
+    monthsPaid: [1], // Paid for Feb
   },
   {
     first_name: "Haseeb",
@@ -38,6 +40,7 @@ const user = [
     isActive: false,
     assignedLocker: 45,
     fee: false,
+    monthsPaid: [2], // Paid for Mar
   },
   {
     first_name: "Sahil",
@@ -50,6 +53,7 @@ const user = [
     isActive: true,
     assignedLocker: null,
     fee: false,
+    monthsPaid: [], // No fee paid yet
   },
   {
     first_name: "Zeenat",
@@ -62,6 +66,7 @@ const user = [
     isActive: true,
     assignedLocker: 32,
     fee: true,
+    monthsPaid: [4, 5], // Paid for May, Jun
   },
   {
     first_name: "Rabia",
@@ -74,6 +79,7 @@ const user = [
     isActive: false,
     assignedLocker: null,
     fee: false,
+    monthsPaid: [5], // Paid for Jun
   },
   {
     first_name: "Bilal",
@@ -86,6 +92,7 @@ const user = [
     isActive: true,
     assignedLocker: 57,
     fee: true,
+    monthsPaid: [6, 7], // Paid for Jul, Aug
   },
   {
     first_name: "Aamir",
@@ -98,6 +105,7 @@ const user = [
     isActive: true,
     assignedLocker: null,
     fee: false,
+    monthsPaid: [7], // Paid for Aug
   },
   {
     first_name: "Amir",
@@ -110,6 +118,7 @@ const user = [
     isActive: false,
     assignedLocker: 68,
     fee: true,
+    monthsPaid: [8], // Paid for Sep
   },
   {
     first_name: "Insha",
@@ -122,6 +131,7 @@ const user = [
     isActive: true,
     assignedLocker: null,
     fee: false,
+    monthsPaid: [9], // Paid for Oct
   },
 ];
 

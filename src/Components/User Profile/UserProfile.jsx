@@ -34,9 +34,14 @@ const UserProfile = ({ navigation, route }) => {
     }
   };
 
-  const renderMonthBox = (label) => {
+  const renderMonthBox = (label, value) => {
     return (
-      <View style={[styles.monthBox,styles.monthPaid]}>
+      <View
+        style={[
+          styles.monthBox,
+          user.monthsPaid.includes(value) && styles.monthPaid,
+        ]}
+      >
         <Text style={styles.monthName}>{label}</Text>
       </View>
     );
@@ -151,18 +156,18 @@ const UserProfile = ({ navigation, route }) => {
         </View>
 
         <View style={styles.monthlyContainer}>
-          {renderMonthBox("Jan")}
-          {renderMonthBox("Feb")}
-          {renderMonthBox("Mar")}
-          {renderMonthBox("Apr")}
-          {renderMonthBox("May")}
-          {renderMonthBox("Jun")}
-          {renderMonthBox("Jul")}
-          {renderMonthBox("Aug")}
-          {renderMonthBox("Sep")}
-          {renderMonthBox("Oct")}
-          {renderMonthBox("Nov")}
-          {renderMonthBox("Dec")}
+          {renderMonthBox("Jan", 0)}
+          {renderMonthBox("Feb", 1)}
+          {renderMonthBox("Mar", 2)}
+          {renderMonthBox("Apr", 3)}
+          {renderMonthBox("May", 4)}
+          {renderMonthBox("Jun", 5)}
+          {renderMonthBox("Jul", 6)}
+          {renderMonthBox("Aug", 7)}
+          {renderMonthBox("Sep", 8)}
+          {renderMonthBox("Oct", 9)}
+          {renderMonthBox("Nov", 10)}
+          {renderMonthBox("Dec", 11)}
         </View>
         <View style={styles.buttomContainer}>
           {user.assignedLocker ? (
