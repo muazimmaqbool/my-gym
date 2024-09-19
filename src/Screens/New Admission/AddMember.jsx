@@ -45,6 +45,7 @@ const AddMember = ({navigation}) => {
           {renderField("First Name")}
           {renderField("Last Name")}
           {renderGenderFields()}
+          {renderField("Occupation")}
           {renderField("Age")}
           {renderField("Address")}
           {renderField("Pincode")}
