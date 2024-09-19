@@ -14,7 +14,14 @@ export const styles=StyleSheet.create({
       imgContainer:{
         alignSelf: "center",
       },
-  
+      selectImg:{
+        width:80,
+        height:80,
+        backgroundColor:"#F8F8FB",
+        borderRadius:50,
+        justifyContent: "center",
+        alignContent: "center",
+      },
       textInput:{
         width:"100%",
         height:40,

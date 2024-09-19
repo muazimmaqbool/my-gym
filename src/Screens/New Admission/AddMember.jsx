@@ -1,13 +1,19 @@
 import { View, Text, ScrollView } from "react-native";
 import React, { useState } from "react";
 import { styles } from "./StyleAddMember";
-import { Button, TextInput, RadioButton, Avatar } from "react-native-paper";
-import testImg from "../../../assets/images/Test Images/male.jpg"
+import {
+  Button,
+  TextInput,
+  RadioButton,
+  Avatar,
+  Icon,
+} from "react-native-paper";
+import testImg from "../../../assets/images/Test Images/male.jpg";
 
 //called from HomeScreen and Allmembers and its navigated in HomeStack.jsx
-const AddMember = ({navigation}) => {
+const AddMember = ({ navigation }) => {
   const [gender, setgender] = useState("Male");
-  console.log("gender",gender)
+  console.log("gender", gender);
 
   const renderField = (label) => {
     return (
@@ -25,17 +31,17 @@ const AddMember = ({navigation}) => {
 
   const renderGenderFields = () => {
     return (
-     <View>
-      <Text style={styles.genderText}>Gender</Text>
-      <RadioButton.Group
-        onValueChange={(value) => setgender(value)}
-        value={gender}
-        style={styles.radioBox}
-      >
-        <RadioButton.Item color="#3a86ff" label="Male" value="Male" />
-        <RadioButton.Item color="#3a86ff" label="Female" value="Female" />
-      </RadioButton.Group>
-     </View>
+      <View>
+        <Text style={styles.genderText}>Gender</Text>
+        <RadioButton.Group
+          onValueChange={(value) => setgender(value)}
+          value={gender}
+          style={styles.radioBox}
+        >
+          <RadioButton.Item color="#3a86ff" label="Male" value="Male" />
+          <RadioButton.Item color="#3a86ff" label="Female" value="Female" />
+        </RadioButton.Group>
+      </View>
     );
   };
 
@@ -44,7 +50,10 @@ const AddMember = ({navigation}) => {
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.inputContainer}>
           <View style={styles.imgContainer}>
-            <Avatar.Image size={80} source={testImg}/>
+            <Avatar.Image size={80} source={testImg} />
+            <View style={styles.selectImg}>
+              <Icon source="camera" color={"blue"} size={30} />
+            </View>
           </View>
           {renderField("First Name")}
           {renderField("Last Name")}
@@ -62,7 +71,7 @@ const AddMember = ({navigation}) => {
             buttonColor="#E3242B"
             style={{ width: "40%" }}
             mode="contained"
-            onPress={()=>navigation.navigate("homeScreen")}
+            onPress={() => navigation.navigate("homeScreen")}
           >
             Cancel
           </Button>
