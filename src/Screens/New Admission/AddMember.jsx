@@ -1,7 +1,8 @@
 import { View, Text, ScrollView } from "react-native";
 import React, { useState } from "react";
 import { styles } from "./StyleAddMember";
-import { Button, TextInput, RadioButton } from "react-native-paper";
+import { Button, TextInput, RadioButton, Avatar } from "react-native-paper";
+import testImg from "../../../assets/images/Test Images/male.jpg"
 
 //called from HomeScreen and Allmembers and its navigated in HomeStack.jsx
 const AddMember = ({navigation}) => {
@@ -42,6 +43,9 @@ const AddMember = ({navigation}) => {
     <View style={styles.container}>
       <ScrollView showsVerticalScrollIndicator={false}>
         <View style={styles.inputContainer}>
+          <View style={styles.imgContainer}>
+            <Avatar.Image size={80} source={testImg}/>
+          </View>
           {renderField("First Name")}
           {renderField("Last Name")}
           {renderGenderFields()}

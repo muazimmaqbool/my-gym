@@ -9,8 +9,12 @@ export const styles=StyleSheet.create({
         padding:20,
       },
       inputContainer:{
-        gap:15
+        gap:15,
       },
+      imgContainer:{
+        alignSelf: "center",
+      },
+  
       textInput:{
         width:"100%",
         height:40,
