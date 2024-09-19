@@ -1,4 +1,4 @@
-import { View, Text, ScrollView } from "react-native";
+import { View, Text, ScrollView, Pressable } from "react-native";
 import React, { useState } from "react";
 import { styles } from "./StyleAddMember";
 import {
@@ -51,9 +51,9 @@ const AddMember = ({ navigation }) => {
         <View style={styles.inputContainer}>
           <View style={styles.imgContainer}>
             <Avatar.Image size={80} source={testImg} />
-            <View style={styles.selectImg}>
-              <Icon source="camera" color={"blue"} size={30} />
-            </View>
+            <Pressable style={styles.selectImg}>
+              <Icon source="camera" color={"#3a86ff"} size={40} />
+            </Pressable>
           </View>
           {renderField("First Name")}
           {renderField("Last Name")}

@@ -20,7 +20,7 @@ export const styles=StyleSheet.create({
         backgroundColor:"#F8F8FB",
         borderRadius:50,
         justifyContent: "center",
-        alignContent: "center",
+        alignItems: "center",
       },
       textInput:{
         width:"100%",
