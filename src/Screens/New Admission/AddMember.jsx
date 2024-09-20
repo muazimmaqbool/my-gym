@@ -1,5 +1,5 @@
-import { View, Text, ScrollView, Pressable } from "react-native";
-import React, { useState } from "react";
+import { View, Text, ScrollView, Pressable, Platform } from "react-native";
+import React, { useEffect, useState } from "react";
 import { styles } from "./StyleAddMember";
 import {
   Button,
@@ -10,6 +10,7 @@ import {
   Dialog,
 } from "react-native-paper";
 import testImg from "../../../assets/images/Test Images/male.jpg";
+import * as ImagePicker from "expo-image-picker";
 
 //called from HomeScreen and Allmembers and its navigated in HomeStack.jsx
 const AddMember = ({ navigation }) => {
@@ -17,6 +18,55 @@ const AddMember = ({ navigation }) => {
   //console.log("gender", gender);
   const [image, setImage] = useState();
   const [showDialog, setShowDialog] = useState(false);
+
+  useEffect(() => {
+    (async () => {
+      if (Platform.OS !== "web") {
+        const libraryStatus =
+          await ImagePicker.requestMediaLibraryPermissionsAsync();
+        if (libraryStatus.status !== "granted") {
+          alert("Sorry, we need camera roll permissions to make this work!");
+        }
+
+        const cameraStatus = await ImagePicker.requestCameraPermissionsAsync();
+        if (cameraStatus.status !== "granted") {
+          alert("Sorry, we need camera permissions to make this work!");
+        }
+      }
+    })();
+  }, []);
+
+  //used to select image from gallery
+  const pickImage = async () => {
+    let result = await ImagePicker.launchImageLibraryAsync({
+      mediaTypes: ImagePicker.MediaTypeOptions.Images,
+      allowsEditing: true,
+      aspect: [1, 1],
+      quality: 1,
+    });
+
+    if (!result.cancelled) {
+      setImage(result.assets[0]);
+      setShowDialog(false)
+    }
+  };
+
+  //used to upload image from camera
+  const clickImage = async () => {
+    try {
+      await ImagePicker.requestCameraPermissionsAsync();
+      let result = await ImagePicker.launchCameraAsync({
+        cameraType: ImagePicker.CameraType.back,
+        allowsEditing: true,
+        aspect: [1, 1], //try [9,16] also
+        quality: 1,
+      });
+      if (!result.cancelled) {
+        setImage(result.assets[0]);
+        setShowDialog(false)
+      }
+    } catch (error) {}
+  };
 
   const renderField = (label) => {
     return (
@@ -54,7 +104,7 @@ const AddMember = ({ navigation }) => {
         <View style={styles.inputContainer}>
           <View style={styles.imgContainer}>
             {image ? (
-              <Avatar.Image size={80} source={testImg} />
+              <Avatar.Image size={90} source={image} />
             ) : (
               <Pressable
                 style={styles.selectImg}
@@ -99,8 +149,8 @@ const AddMember = ({ navigation }) => {
           <Text variant="bodyMedium">This is simple dialog</Text>
         </Dialog.Content> */}
         <Dialog.Actions>
-          <Button mode="contained" buttonColor="#3a86ff" textColor="#FFFFFF">Use Camera</Button>
-          <Button mode="conatined" buttonColor="#3a86ff" textColor="#FFFFFF" >Upload Image</Button>
+          <Button onPress={clickImage} mode="contained" buttonColor="#3a86ff" textColor="#FFFFFF">Use Camera</Button>
+          <Button onPress={pickImage} mode="conatined" buttonColor="#3a86ff" textColor="#FFFFFF" >Upload Image</Button>
         </Dialog.Actions>
       </Dialog>
     </View>
