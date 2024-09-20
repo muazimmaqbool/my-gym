@@ -8,6 +8,7 @@ import {
   Avatar,
   Icon,
   Dialog,
+  Badge,
 } from "react-native-paper";
 import testImg from "../../../assets/images/Test Images/male.jpg";
 import * as ImagePicker from "expo-image-picker";
@@ -47,7 +48,7 @@ const AddMember = ({ navigation }) => {
 
     if (!result.cancelled) {
       setImage(result.assets[0]);
-      setShowDialog(false)
+      setShowDialog(false);
     }
   };
 
@@ -63,7 +64,7 @@ const AddMember = ({ navigation }) => {
       });
       if (!result.cancelled) {
         setImage(result.assets[0]);
-        setShowDialog(false)
+        setShowDialog(false);
       }
     } catch (error) {}
   };
@@ -104,7 +105,16 @@ const AddMember = ({ navigation }) => {
         <View style={styles.inputContainer}>
           <View style={styles.imgContainer}>
             {image ? (
-              <Avatar.Image size={90} source={image} />
+              <View>
+                <Avatar.Image size={90} source={image} />
+                <Pressable onPress={() => setShowDialog(true)} style={styles.editImg}>
+                  <Icon
+                    source="square-edit-outline"
+                    color={"gray"}
+                    size={25}
+                  />
+                </Pressable>
+              </View>
             ) : (
               <Pressable
                 style={styles.selectImg}
@@ -149,8 +159,22 @@ const AddMember = ({ navigation }) => {
           <Text variant="bodyMedium">This is simple dialog</Text>
         </Dialog.Content> */}
         <Dialog.Actions>
-          <Button onPress={clickImage} mode="contained" buttonColor="#3a86ff" textColor="#FFFFFF">Use Camera</Button>
-          <Button onPress={pickImage} mode="conatined" buttonColor="#3a86ff" textColor="#FFFFFF" >Upload Image</Button>
+          <Button
+            onPress={clickImage}
+            mode="contained"
+            buttonColor="#3a86ff"
+            textColor="#FFFFFF"
+          >
+            Use Camera
+          </Button>
+          <Button
+            onPress={pickImage}
+            mode="conatined"
+            buttonColor="#3a86ff"
+            textColor="#FFFFFF"
+          >
+            Upload Image
+          </Button>
         </Dialog.Actions>
       </Dialog>
     </View>

@@ -12,7 +12,13 @@ export const styles=StyleSheet.create({
         gap:15,
       },
       imgContainer:{
-        alignSelf: "center",
+        alignItems: "center",
+        justifyContent: "center",
+      },
+      editImg:{
+        position: "absolute",
+        top:0,
+        left:"23%",
       },
       selectImg:{
         width:80,
