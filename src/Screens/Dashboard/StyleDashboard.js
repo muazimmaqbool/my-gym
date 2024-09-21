@@ -29,7 +29,8 @@ export const styles = StyleSheet.create({
     borderTopLeftRadius: 50,
     paddingVertical: 20,
     paddingHorizontal: 30,
-    gap: 20,
-    paddingTop: 30,
   },
+  cardsContainer:{
+    gap:10,
+  }
 });
