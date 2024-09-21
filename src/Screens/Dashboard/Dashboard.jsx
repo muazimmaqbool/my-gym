@@ -4,12 +4,12 @@ import { Avatar, Card, IconButton } from "react-native-paper";
 import { styles } from "./StyleDashboard";
 
 const Dashboard = () => {
-  const renderCard = (title) => {
+  const renderCard = (title,icon) => {
     return (
       <Card.Title
         title={title}
         //subtitle="Card Subtitle"
-        left={(props) => <Avatar.Icon {...props} icon="folder" />}
+        left={(props) => <Avatar.Icon {...props} icon={icon} />}
         right={(props) => (
           <IconButton {...props} icon="dots-vertical" onPress={() => {}} />
         )}
@@ -26,7 +26,7 @@ const Dashboard = () => {
 
       <View style={styles.mainView}>
         <View style={styles.cardsContainer}>
-          {renderCard("Members Overview")}
+          {renderCard("Members Overview","account-supervisor")}
           {renderCard("Staff Management")}
           {renderCard("Notifications & Alerts")}
           {renderCard("Inventory Management")}
