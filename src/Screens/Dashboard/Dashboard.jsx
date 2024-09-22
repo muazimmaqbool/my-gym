@@ -2,6 +2,7 @@ import { View, Text } from "react-native";
 import React from "react";
 import { Avatar, Card, IconButton } from "react-native-paper";
 import { styles } from "./StyleDashboard";
+import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
 
 const Dashboard = () => {
   const renderCard = (title,icon) => {
@@ -11,7 +12,7 @@ const Dashboard = () => {
         //subtitle="Card Subtitle"
         left={(props) => <Avatar.Icon {...props} icon={icon} />}
         right={(props) => (
-          <IconButton {...props} icon="dots-vertical" onPress={() => {}} />
+          <IconButton {...props} icon="chevron-right" onPress={() => {}} />
         )}
         style={{backgroundColor:"#F8F8FB",borderRadius:10}}
       />
@@ -27,10 +28,10 @@ const Dashboard = () => {
       <View style={styles.mainView}>
         <View style={styles.cardsContainer}>
           {renderCard("Members Overview","account-supervisor")}
-          {renderCard("Staff Management")}
-          {renderCard("Notifications & Alerts")}
-          {renderCard("Inventory Management")}
-          {renderCard("Billing and Payments")}
+          {renderCard("Staff Management","account-tie")}
+          {renderCard("Notifications & Alerts","message-alert")}
+          {renderCard("Inventory Management","office-building-cog-outline")}
+          {renderCard("Billing and Payments","currency-usd")}
         </View>
       </View>
     </View>
