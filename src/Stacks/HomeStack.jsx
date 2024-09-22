@@ -45,7 +45,7 @@ const HomeStack = () => {
         name="dashboard"
         component={Dashboard}
         options={{
-          headerShown: true,
+          headerShown: false,
           title: "Dashboard",
           headerShadowVisible: false,
           

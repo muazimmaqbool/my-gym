@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
     backgroundColor: "#3a86ff",
   },
   topBar: {
-    height: "20%",
+    height: "25%",
     alignItems: "center",
     justifyContent: "center",
   },
@@ -27,10 +27,12 @@ export const styles = StyleSheet.create({
     backgroundColor: "white",
     borderTopRightRadius: 50,
     borderTopLeftRadius: 50,
-    paddingVertical: 20,
+    paddingVertical: 25,
     paddingHorizontal: 30,
+    paddingTop:40,
+    justifyContent:"space-between"
   },
   cardsContainer:{
-    gap:10,
+    gap:15,
   }
 });
