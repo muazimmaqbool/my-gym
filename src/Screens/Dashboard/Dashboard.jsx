@@ -14,7 +14,7 @@ const Dashboard = ({ navigation }) => {
         right={(props) => (
           <IconButton {...props} icon="chevron-right" onPress={() => {}} />
         )}
-        style={{ backgroundColor: "#F8F8FB", borderRadius: 10 }}
+        style={styles.cardStyle}
       />
     );
   };

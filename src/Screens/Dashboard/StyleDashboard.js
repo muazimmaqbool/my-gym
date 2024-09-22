@@ -29,10 +29,17 @@ export const styles = StyleSheet.create({
     borderTopLeftRadius: 50,
     paddingVertical: 25,
     paddingHorizontal: 30,
-    paddingTop:40,
-    justifyContent:"space-between"
+    paddingTop: 40,
+    justifyContent: "space-between",
   },
-  cardsContainer:{
-    gap:15,
-  }
+  cardsContainer: {
+    gap: 15,
+  },
+  cardStyle: {
+    backgroundColor: "#F8F8FB",
+    borderRadius: 10,
+    fontWeight: "300",
+    color: "#1D1E25",
+    fontSize: 17,
+  },
 });
