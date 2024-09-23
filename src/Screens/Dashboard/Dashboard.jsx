@@ -30,7 +30,7 @@ const Dashboard = ({ navigation }) => {
           {renderCard("Members Overview", "account-supervisor")}
           {renderCard("Staff Management", "account-tie")}
           {renderCard("Notifications & Alerts", "message-alert")}
-          {renderCard("Inventory Management", "office-building-cog-outline")}
+          {/* {renderCard("Inventory Management", "office-building-cog-outline")} */}
           {renderCard("Billing and Payments", "currency-usd")}
         </View>
         <Button
