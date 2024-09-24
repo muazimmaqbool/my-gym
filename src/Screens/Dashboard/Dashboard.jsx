@@ -40,7 +40,7 @@ const Dashboard = ({ navigation }) => {
           contentStyle={{ flexDirection: "row-reverse" }}
           onPress={() => navigation.navigate("homeScreen")}
         >
-          Go TO HOME
+          Return To Home
         </Button>
       </View>
     </View>
