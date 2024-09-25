@@ -112,7 +112,7 @@ const HomeStack = () => {
         component={StaffManagement}
         options={{
           headerShown: true,
-          title: "Members Overview",
+          title: "Staff Management",
           headerShadowVisible: false,
         }}
       />
@@ -121,7 +121,7 @@ const HomeStack = () => {
         component={NotificationAlerts}
         options={{
           headerShown: true,
-          title: "Members Overview",
+          title: "Notifications and Alerts",
           headerShadowVisible: false,
         }}
       />
@@ -130,7 +130,7 @@ const HomeStack = () => {
         component={Inventory}
         options={{
           headerShown: true,
-          title: "Members Overview",
+          title: "Inventory Management",
           headerShadowVisible: false,
         }}
       />
@@ -139,7 +139,7 @@ const HomeStack = () => {
         component={BillingAndPayments}
         options={{
           headerShown: true,
-          title: "Members Overview",
+          title: "Billing and Payments",
           headerShadowVisible: false,
         }}
       />
