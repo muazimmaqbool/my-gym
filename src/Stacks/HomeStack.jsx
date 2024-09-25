@@ -110,6 +110,16 @@ const HomeStack = () => {
           
         }}
       />
+      <Stack.Screen
+        name="staffManagement"
+        component={}
+        options={{
+          headerShown: true,
+          title: "Members Overview",
+          headerShadowVisible: false,
+          
+        }}
+      />
       
     </Stack.Navigator>
   );
