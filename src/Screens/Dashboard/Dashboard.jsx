@@ -31,10 +31,10 @@ const Dashboard = ({ navigation }) => {
       <View style={styles.mainView}>
         <View style={styles.cardsContainer}>
           {renderCard("Members Overview", "account-supervisor","membersOverview")}
-          {renderCard("Staff Management", "account-tie")}
-          {renderCard("Notifications & Alerts", "message-alert")}
-          {renderCard("Inventory Management", "office-building-cog-outline")}
-          {renderCard("Billing and Payments", "currency-usd")}
+          {renderCard("Staff Management", "account-tie","staffManagement")}
+          {renderCard("Notifications & Alerts", "message-alert","notificationAlerts")}
+          {renderCard("Inventory Management", "office-building-cog-outline","inventory")}
+          {renderCard("Billing and Payments", "currency-usd","billings")}
         </View>
         <Button
           buttonColor="#3a86ff"
