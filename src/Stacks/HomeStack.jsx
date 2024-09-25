@@ -9,6 +9,7 @@ import AllMembers from "../Screens/All Members/AllMembers"
 import AddMember from "../Screens/New Admission/AddMember"
 import Notifcations from "../Screens/Notifications/Notifications"
 import UserProfile from "../Components/User Profile/UserProfile"
+import MembersOverview from "../Components/Members Overview/MembersOverview"
 
 const Stack = createNativeStackNavigator();
 
@@ -99,6 +100,17 @@ const HomeStack = () => {
           
         }}
       />
+       <Stack.Screen
+        name="membersOverview"
+        component={MembersOverview}
+        options={{
+          headerShown: true,
+          title: "Members Overview",
+          headerShadowVisible: false,
+          
+        }}
+      />
+      
     </Stack.Navigator>
   );
 };
