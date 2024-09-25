@@ -1,13 +1,14 @@
-import { View, Text } from "react-native";
+import { View, Text, Pressable } from "react-native";
 import React from "react";
 import { Avatar, Button, Card, IconButton } from "react-native-paper";
 import { styles } from "./StyleDashboard";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 
 const Dashboard = ({ navigation }) => {
-  const renderCard = (title, icon) => {
+  const renderCard = (title, icon,navigateTo) => {
     return (
-      <Card.Title
+     <Pressable onPress={()=>{navigation.navigate(navigateTo)}}>
+       <Card.Title
         title={title}
         //subtitle="Card Subtitle"
         left={(props) => <Avatar.Icon {...props} icon={icon} />}
@@ -15,7 +16,9 @@ const Dashboard = ({ navigation }) => {
           <IconButton {...props} icon="chevron-right" onPress={() => {}} />
         )}
         style={styles.cardStyle}
+        
       />
+     </Pressable>
     );
   };
   return (
@@ -27,7 +30,7 @@ const Dashboard = ({ navigation }) => {
 
       <View style={styles.mainView}>
         <View style={styles.cardsContainer}>
-          {renderCard("Members Overview", "account-supervisor")}
+          {renderCard("Members Overview", "account-supervisor","membersOverview")}
           {renderCard("Staff Management", "account-tie")}
           {renderCard("Notifications & Alerts", "message-alert")}
           {renderCard("Inventory Management", "office-building-cog-outline")}
