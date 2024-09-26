@@ -11,7 +11,8 @@ export const styles =StyleSheet.create({
       },
       mainView:{
         backgroundColor:"#F3F4F6",
-        alignItems:"center",
+        alignItems:"flex-start",
         borderRadius:10,
+        padding:15,
       }
 })
