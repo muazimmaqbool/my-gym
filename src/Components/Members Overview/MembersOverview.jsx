@@ -1,9 +1,10 @@
 import { View, Text } from 'react-native'
 import React from 'react'
+import {styles} from "./StyleMembersOverView"
 
-const MembersOverview = () => {
+const MembersOverview = ({navigation}) => {
   return (
-    <View>
+    <View style={styles.container}>
       <Text>MembersOverview</Text>
     </View>
   )
