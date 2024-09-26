@@ -24,8 +24,7 @@ const MembersOverview = ({ navigation }) => {
           { value: "inactiveMembers", label: "InActive" },
         ]}
       />
-      <ScrollView>
-        <View>
+      <ScrollView contentContainerStyle={styles.mainView}>
           {currSegment === "allMembers" ? (
             <Text>All Members</Text>
           ) : currSegment === "activeMembers" ? (
@@ -33,7 +32,6 @@ const MembersOverview = ({ navigation }) => {
           ) : (
             <Text>InActive Members</Text>
           )}
-        </View>
       </ScrollView>
     </View>
   );

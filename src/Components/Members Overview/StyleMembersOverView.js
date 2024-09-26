@@ -4,8 +4,14 @@ export const styles =StyleSheet.create({
     container: {
         flex: 1,
         justifyContent: "flex-start",
-        alignItems: "center", 
+        alignItems: "stretch", 
         backgroundColor:"#FFFFFF",
         padding:20,
+        gap:20
       },
+      mainView:{
+        backgroundColor:"#F3F4F6",
+        alignItems:"center",
+        borderRadius:10,
+      }
 })
