@@ -1,11 +1,34 @@
-import { View, Text } from 'react-native'
-import React from 'react'
+import { View, Text, ScrollView } from 'react-native'
+import React, { useState } from 'react'
 import {styles} from "./StyleMembersOverView"
+import { SegmentedButtons } from 'react-native-paper'
 
 const MembersOverview = ({navigation}) => {
+  const [currSegment, setcurrSegment] = useState();
+  //console.log("currSegment", currSegment)
+
   return (
     <View style={styles.container}>
-      <Text>MembersOverview</Text>
+       <SegmentedButtons
+        value={currSegment}
+        onValueChange={setcurrSegment}
+        buttons={[
+          {
+            value: 'allMembers',
+            label: 'All',
+          },
+          {
+            value: 'activeMembers',
+            label: 'Active',
+          },
+          { value: 'inactiveMembers', label: 'InActive' },
+        ]}
+      />
+      <ScrollView>
+        <View>
+          
+        </View>
+      </ScrollView>
     </View>
   )
 }
