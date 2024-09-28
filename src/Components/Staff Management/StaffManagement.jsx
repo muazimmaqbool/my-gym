@@ -5,7 +5,7 @@ import { styles } from "./StyleStaff";
 import staffUsers from "../../dummyStaff";
 
 const StaffManagement = () => {
-  const [currSegment, setcurrSegment] = useState("allStaffMembers");
+  const [currSegment, setcurrSegment] = useState("all");
 
   const renderUser = (item, index) => {
     return (
@@ -50,7 +50,7 @@ const StaffManagement = () => {
             </ScrollView>
           ) : currSegment === "trainers" ? (
             <>
-              {users.filter((user) => user.isActive === true).length > 0 ? (
+              {staffUsers.filter((user) => user.role === "trainer").length > 0 ? (
                 <ScrollView contentContainerStyle={styles.mainContainer}>
                   {staffUsers
                     .filter((user) => user.role === "trainer")
@@ -62,7 +62,7 @@ const StaffManagement = () => {
             </>
           ) : (
             <>
-              {users.filter((user) => user.isActive === false).length > 0 ? (
+              {staffUsers.filter((user) => user.role === "frontDesk").length > 0 ? (
                 <ScrollView contentContainerStyle={styles.mainContainer}>
                   {staffUsers
                     .filter((user) => user.role === "frontDesk")
