@@ -5,7 +5,7 @@ import { Avatar, SegmentedButtons } from "react-native-paper";
 import users from "../../dummyUsers";
 
 const MembersOverview = ({ navigation }) => {
-  const [currSegment, setcurrSegment] = useState();
+  const [currSegment, setcurrSegment] = useState("allMembers");
   //console.log("currSegment", currSegment)
 
   return (
@@ -25,24 +25,23 @@ const MembersOverview = ({ navigation }) => {
           { value: "inactiveMembers", label: "InActive" },
         ]}
       />
-      <ScrollView contentContainerStyle={styles.mainContainer}>
-        <View>
+  
           {currSegment === "allMembers" ? (
             <>
               {users && users.length > 0 ? (
-                <>
-                  {users.map((user, index) => (
+                <ScrollView contentContainerStyle={styles.mainContainer}>
+                  {users.map((item, index) => (
                     <Pressable
                       key={index}
                       style={styles.userBox}
-                      onPress={() =>
-                        navigation.navigate("userProfile", {
-                          user: item,
-                        })
-                      }
+                      // onPress={() =>
+                      //   navigation.navigate("userProfile", {
+                      //     user: item,
+                      //   })
+                      // }
                     >
                       <Avatar.Image size={60} source={item.image} />
-                      <View style={styles.userInfo}>
+                      <View>
                         <Text style={styles.name}>
                           {item.first_name} {item.last_name}
                         </Text>
@@ -53,7 +52,7 @@ const MembersOverview = ({ navigation }) => {
                       </View>
                     </Pressable>
                   ))}
-                </>
+                </ScrollView>
               ) : (
                 <Text style={styles.noData}>No Member Found</Text>
               )}
@@ -61,7 +60,30 @@ const MembersOverview = ({ navigation }) => {
           ) : currSegment === "activeMembers" ? (
             <>
               {users && users.length > 0 ? (
-                <></>
+                <ScrollView contentContainerStyle={styles.mainContainer}>
+                  {users.map((item, index) => (
+                    <Pressable
+                      key={index}
+                      style={styles.userBox}
+                      // onPress={() =>
+                      //   navigation.navigate("userProfile", {
+                      //     user: item,
+                      //   })
+                      // }
+                    >
+                      <Avatar.Image size={60} source={item.image} />
+                      <View>
+                        <Text style={styles.name}>
+                          {item.first_name} {item.last_name}
+                        </Text>
+                        <Text style={styles.demographic}>
+                          {item.age} Years Old {item.gender}
+                        </Text>
+                        <Text style={styles.address}>{item.address}</Text>
+                      </View>
+                    </Pressable>
+                  ))}
+                </ScrollView>
               ) : (
                 <Text style={styles.noData}>No Member Found</Text>
               )}
@@ -75,8 +97,7 @@ const MembersOverview = ({ navigation }) => {
               )}
             </>
           )}
-        </View>
-      </ScrollView>
+
     </View>
   );
 };

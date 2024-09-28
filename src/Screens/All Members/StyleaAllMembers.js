@@ -44,9 +44,6 @@ export const styles=StyleSheet.create({
         borderBottomWidth:1,
         paddingBottom:10
       },
-      userInfo:{
-        
-      },
       name:{
         color:"#1D1E25",
         fontWeight:"700",
