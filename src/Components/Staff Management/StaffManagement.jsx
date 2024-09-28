@@ -8,6 +8,7 @@ const StaffManagement = () => {
   const [currSegment, setcurrSegment] = useState("all");
 
   const renderUser = (item, index) => {
+    console.log("role",item.role)
     return (
       <Pressable key={index} style={styles.userBox}>
         <Avatar.Image size={60} source={item.image} />
@@ -16,7 +17,7 @@ const StaffManagement = () => {
             {item.first_name} {item.last_name}
           </Text>
           <Text style={styles.demographic}>
-            {item.role === "frontDesk " ? "Front Desk" : "Trainer"}
+            {item.role === "frontDesk" ? "Front Desk" : "Trainer"}
           </Text>
           <Text style={styles.address}>{item.address}</Text>
         </View>
