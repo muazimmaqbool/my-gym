@@ -14,7 +14,7 @@ export const styles =StyleSheet.create({
         alignItems:"flex-start",
         borderRadius:10,
         padding:15,
-        paddingBottom:50,   
+        //paddingBottom:50,   
         gap:15
       },
       userBox:{
