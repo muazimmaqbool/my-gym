@@ -9,7 +9,7 @@ const staffUsers = [
     gender: "Male",
     image: maleImg,
     joiningDate: "01/01/2024",
-    role:"Front Desk",
+    role:"frontDesk",
   },
   {
     first_name: "Shahid",
@@ -18,7 +18,7 @@ const staffUsers = [
     gender: "Male",
     image: maleImg,
     joiningDate: "01/01/2024",
-    role:"Trainer",
+    role:"trainer",
   },
   {
     first_name: "Mushtaq",
@@ -27,16 +27,16 @@ const staffUsers = [
     gender: "Male",
     image: maleImg,
     joiningDate: "01/01/2024",
-    role:"Trainer",
+    role:"trainer",
   },
   {
     first_name: "Bisma",
     last_name: "Farooq",
     address: "New Colony, sopore",
     gender: "Male",
-    image: maleImg,
+    image: femaleImg,
     joiningDate: "01/01/2024",
-    role:"Trainer",
+    role:"trainer",
     
   },
  
