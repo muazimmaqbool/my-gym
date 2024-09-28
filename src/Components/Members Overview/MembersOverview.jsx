@@ -51,40 +51,40 @@ const MembersOverview = ({ navigation }) => {
         ]}
       />
 
-      {currSegment === "allMembers" ? (
+      {users && users.length > 0 ? (
         <>
-          {users && users.length > 0 ? (
+          {currSegment === "allMembers" ? (
             <ScrollView contentContainerStyle={styles.mainContainer}>
               {users.map((item, index) => renderUser(item, index))}
             </ScrollView>
+          ) : currSegment === "activeMembers" ? (
+            <>
+              {users.filter((user)=>user.isActive===true).length > 0 ? (
+                <ScrollView contentContainerStyle={styles.mainContainer}>
+                  {users
+                    .filter((user) => user.isActive === true)
+                    .map((item, index) => renderUser(item, index))}
+                </ScrollView>
+              ) : (
+                <Text style={styles.noData}>No Member Found</Text>
+              )}
+            </>
           ) : (
-            <Text style={styles.noData}>No Member Found</Text>
-          )}
-        </>
-      ) : currSegment === "activeMembers" ? (
-        <>
-          {users && users.length > 0 ? (
-            <ScrollView contentContainerStyle={styles.mainContainer}>
-              {users
-                .filter((user) => user.isActive === true)
-                .map((item, index) => renderUser(item, index))}
-            </ScrollView>
-          ) : (
-            <Text style={styles.noData}>No Member Found</Text>
+            <>
+              {users.filter((user)=>user.isActive===false).length > 0 ? (
+                <ScrollView contentContainerStyle={styles.mainContainer}>
+                  {users
+                    .filter((user) => user.isActive === false)
+                    .map((item, index) => renderUser(item, index))}
+                </ScrollView>
+              ) : (
+                <Text style={styles.noData}>No Member Found</Text>
+              )}
+            </>
           )}
         </>
       ) : (
-        <>
-          {users && users.length > 0 ? (
-            <ScrollView contentContainerStyle={styles.mainContainer}>
-              {users
-                .filter((user) => user.isActive === false)
-                .map((item, index) =>renderUser(item, index))}
-            </ScrollView>
-          ) : (
-            <Text style={styles.noData}>No Member Found</Text>
-          )}
-        </>
+        <Text style={styles.noData}>No Member Found</Text>
       )}
     </View>
   );
