@@ -1,7 +1,8 @@
-import { View, Text, ScrollView } from "react-native";
+import { View, Text, ScrollView, Pressable } from "react-native";
 import React, { useState } from "react";
 import { styles } from "./StyleMembersOverView";
-import { SegmentedButtons } from "react-native-paper";
+import { Avatar, SegmentedButtons } from "react-native-paper";
+import users from "../../dummyUsers";
 
 const MembersOverview = ({ navigation }) => {
   const [currSegment, setcurrSegment] = useState();
@@ -27,11 +28,52 @@ const MembersOverview = ({ navigation }) => {
       <ScrollView contentContainerStyle={styles.mainContainer}>
         <View>
           {currSegment === "allMembers" ? (
-            <Text>All Members</Text>
+            <>
+              {users && users.length > 0 ? (
+                <>
+                  {users.map((user, index) => (
+                    <Pressable
+                      key={index}
+                      style={styles.userBox}
+                      onPress={() =>
+                        navigation.navigate("userProfile", {
+                          user: item,
+                        })
+                      }
+                    >
+                      <Avatar.Image size={60} source={item.image} />
+                      <View style={styles.userInfo}>
+                        <Text style={styles.name}>
+                          {item.first_name} {item.last_name}
+                        </Text>
+                        <Text style={styles.demographic}>
+                          {item.age} Years Old {item.gender}
+                        </Text>
+                        <Text style={styles.address}>{item.address}</Text>
+                      </View>
+                    </Pressable>
+                  ))}
+                </>
+              ) : (
+                <Text style={styles.noData}>No Member Found</Text>
+              )}
+            </>
           ) : currSegment === "activeMembers" ? (
-            <Text>Active Members</Text>
+            <>
+              {users && users.length > 0 ? (
+                <></>
+              ) : (
+                <Text style={styles.noData}>No Member Found</Text>
+              )}
+            </>
           ) : (
-            <Text>InActive Members</Text>
+            <>
+              {users && users.length > 0 ? (
+                <></>
+              ) : (
+                <Text style={styles.noData}>No Member Found</Text>
+              )}
+            </>
           )}
         </View>
       </ScrollView>
