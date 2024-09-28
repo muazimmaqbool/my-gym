@@ -61,7 +61,7 @@ const MembersOverview = ({ navigation }) => {
             <>
               {users && users.length > 0 ? (
                 <ScrollView contentContainerStyle={styles.mainContainer}>
-                  {users.map((item, index) => (
+                  {users.filter((user)=>user.isActive===true).map((item, index) => (
                     <Pressable
                       key={index}
                       style={styles.userBox}
