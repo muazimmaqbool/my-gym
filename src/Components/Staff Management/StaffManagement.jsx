@@ -6,7 +6,6 @@ import staffUsers from "../../dummyStaff";
 
 const StaffManagement = () => {
   const [currSegment, setcurrSegment] = useState("all");
-  console.log("currsegment:",currSegment)
 
   const renderUser = (item, index) => {
     console.log("role",item.role)
