@@ -19,7 +19,7 @@ export const styles =StyleSheet.create({
         backgroundColor:"#F3F4F6",
         flexDirection:"row",
         alignItems:"flex-start",
-        gap:20,
+        gap:15,
         padding:10,
         borderRadius:10,
       },

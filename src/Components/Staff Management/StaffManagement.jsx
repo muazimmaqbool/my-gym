@@ -15,9 +15,12 @@ const StaffManagement = () => {
         <View>
           <Text style={styles.name}>
             {item.first_name} {item.last_name}
+            {" "}
+            <Text  style={styles.demographic}>({item.role === "frontDesk" ? "Front Desk" : "Trainer"})</Text>
           </Text>
           <Text style={styles.demographic}>
-            {item.role === "frontDesk" ? "Front Desk" : "Trainer"}
+            
+            {item.gender}
           </Text>
           <Text style={styles.address}>{item.address}</Text>
         </View>
