@@ -11,9 +11,8 @@ export const styles =StyleSheet.create({
       },
       mainContainer:{    
         alignItems:"flex-start",
-        borderRadius:10,
         paddingHorizontal:15,
-        gap:10
+        gap:15
       },
       userBox:{
         width:"100%",
