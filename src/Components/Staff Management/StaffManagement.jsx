@@ -8,7 +8,7 @@ const StaffManagement = () => {
   const [currSegment, setcurrSegment] = useState("all");
 
   const renderUser = (item, index) => {
-    console.log("role",item.role)
+    //console.log("role",item.role)
     return (
       <Pressable key={index} style={styles.userBox}>
         <Avatar.Image size={60} source={item.image} />

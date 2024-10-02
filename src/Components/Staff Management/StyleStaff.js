@@ -9,20 +9,20 @@ export const styles =StyleSheet.create({
         padding:20,
         gap:20
       },
-      mainContainer:{
-        backgroundColor:"#F3F4F6",
+      mainContainer:{    
         alignItems:"flex-start",
         borderRadius:10,
-        padding:15,
-        gap:15
+        paddingHorizontal:15,
+        gap:10
       },
       userBox:{
+        width:"100%",
+        backgroundColor:"#F3F4F6",
         flexDirection:"row",
         alignItems:"flex-start",
         gap:20,
-        borderBottomColor:"#DBDBDB",
-        borderBottomWidth:1,
-        paddingBottom:10
+        padding:10,
+        borderRadius:10,
       },
       name:{
         color:"#1D1E25",
