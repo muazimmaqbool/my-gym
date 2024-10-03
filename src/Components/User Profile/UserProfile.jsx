@@ -15,10 +15,10 @@ import formatDate from "../../Utilities/formatDate";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import { MaterialIcons } from "@expo/vector-icons";
 
-//called from AllMembers.jsx and its navigated in HomeStack.jsx
+//called from AllMembers.jsx, MembersOverview and its navigated in HomeStack.jsx
 const UserProfile = ({ navigation, route }) => {
-  const { user } = route.params;
-  //console.log("user recived:",user)
+  const { user, fromMembersOverview } = route.params;
+  console.log(" fromMembersOverview:", fromMembersOverview)
 
   const [showModal, setshowModal] = useState(false);
   const [monthsPaid, setmonthsPaid] = useState([]);
@@ -66,6 +66,8 @@ const UserProfile = ({ navigation, route }) => {
       </TouchableOpacity>
     );
   };
+
+  
 
   return (
     <SafeAreaView style={styles.container}>

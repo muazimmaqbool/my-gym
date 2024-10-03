@@ -13,11 +13,12 @@ const MembersOverview = ({ navigation }) => {
       <Pressable
         key={index}
         style={styles.userBox}
-        // onPress={() =>
-        //   navigation.navigate("userProfile", {
-        //     user: item,
-        //   })
-        // }
+        onPress={() =>
+          navigation.navigate("userProfile", {
+            user: item,
+            fromMembersOverview:true,
+          })
+        }
       >
         <Avatar.Image size={60} source={item.image} />
         <View>
