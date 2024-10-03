@@ -67,13 +67,19 @@ const UserProfile = ({ navigation, route }) => {
     );
   };
 
-  
+  const handleBack=()=>{
+    if( fromMembersOverview){
+      navigation.navigate("membersOverview")
+    }else{
+      navigation.navigate("allMembers")
+    }
+  }
 
   return (
     <SafeAreaView style={styles.container}>
       <View style={styles.arrowBack}>
         <Ionicons
-          onPress={() => navigation.navigate("allMembers")}
+          onPress={handleBack}
           name="arrow-back"
           size={30}
           color="white"
