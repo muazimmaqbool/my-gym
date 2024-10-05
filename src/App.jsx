@@ -1,5 +1,5 @@
 import { StatusBar, StyleSheet, Text, View } from 'react-native'
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import FrontScreen from "./Components/FrontScreen"
@@ -10,16 +10,19 @@ import HomeStack from "../src/Stacks/HomeStack"
 const Stack = createNativeStackNavigator();
 
 const App = () => {
+  useEffect(() => {
+    StatusBar.setBackgroundColor("#3a86ff");
+    StatusBar.setBarStyle("light-content");
+  }, []);
   return (
    <NavigationContainer independent={true}>
-    <StatusBar
+    {/* <StatusBar
         backgroundColor={"#3a86ff"}//only works on Android //#2563EB
         barStyle={"light-content"} // try: defult, dark-content also
         /*Note: default is white in android and black in ios
                 dark-content: dark color in both
-                ligh-content: white color in both*/
-                translucent={true}
-      />
+                ligh-content: white color in both
+      /> */}
     <RootStack/>
    </NavigationContainer>
   )
