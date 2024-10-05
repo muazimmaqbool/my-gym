@@ -14,14 +14,12 @@ const StaffManagement = () => {
         <Avatar.Image size={60} source={item.image} />
         <View>
           <Text style={styles.name}>
-            {item.first_name} {item.last_name}
-            {" "}
-            <Text  style={styles.demographic}>({item.role === "frontDesk" ? "Front Desk" : "Trainer"})</Text>
+            {item.first_name} {item.last_name}{" "}
+            <Text style={styles.demographic}>
+              ({item.role === "frontDesk" ? "Front Desk" : "Trainer"})
+            </Text>
           </Text>
-          <Text style={styles.demographic}>
-            
-            {item.gender}
-          </Text>
+          <Text style={styles.demographic}>{item.gender}</Text>
           <Text style={styles.address}>{item.address}</Text>
         </View>
       </Pressable>
@@ -40,9 +38,18 @@ const StaffManagement = () => {
           },
           {
             value: "trainers",
-            label: `Trainers (${staffUsers && staffUsers.filter((user) => user.role === "trainer").length})`,
+            label: `Trainers (${
+              staffUsers &&
+              staffUsers.filter((user) => user.role === "trainer").length
+            })`,
           },
-          { value: "frontDesk", label: `Desk (${staffUsers && staffUsers.filter((user) => user.role === "frontDesk").length})` },
+          {
+            value: "frontDesk",
+            label: `Desk (${
+              staffUsers &&
+              staffUsers.filter((user) => user.role === "frontDesk").length
+            })`,
+          },
         ]}
       />
 
@@ -54,7 +61,8 @@ const StaffManagement = () => {
             </ScrollView>
           ) : currSegment === "trainers" ? (
             <>
-              {staffUsers.filter((user) => user.role === "trainer").length > 0 ? (
+              {staffUsers.filter((user) => user.role === "trainer").length >
+              0 ? (
                 <ScrollView contentContainerStyle={styles.mainContainer}>
                   {staffUsers
                     .filter((user) => user.role === "trainer")
@@ -66,7 +74,8 @@ const StaffManagement = () => {
             </>
           ) : (
             <>
-              {staffUsers.filter((user) => user.role === "frontDesk").length > 0 ? (
+              {staffUsers.filter((user) => user.role === "frontDesk").length >
+              0 ? (
                 <ScrollView contentContainerStyle={styles.mainContainer}>
                   {staffUsers
                     .filter((user) => user.role === "frontDesk")
