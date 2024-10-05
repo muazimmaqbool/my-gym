@@ -42,13 +42,13 @@ const MembersOverview = ({ navigation }) => {
         buttons={[
           {
             value: "allMembers",
-            label: "All",
+            label: `All (${users && users.length})`,
           },
           {
             value: "activeMembers",
-            label: "Active",
+            label: `Active (${users && users.filter((user)=>user.isActive===true).length})`,
           },
-          { value: "inactiveMembers", label: "InActive" },
+          { value: "inactiveMembers", label: `InActive (${users && users.filter((user)=>user.isActive===false).length})` },
         ]}
       />
 
