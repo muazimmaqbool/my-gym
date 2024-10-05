@@ -36,13 +36,13 @@ const StaffManagement = () => {
         buttons={[
           {
             value: "all",
-            label: "All",
+            label: `All (${staffUsers && staffUsers.length})`,
           },
           {
             value: "trainers",
-            label: "Trainers",
+            label: `Trainers (${staffUsers && staffUsers.filter((user) => user.role === "trainer").length})`,
           },
-          { value: "frontDesk", label: "Front Desk" },
+          { value: "frontDesk", label: `Desk (${staffUsers && staffUsers.filter((user) => user.role === "frontDesk").length})` },
         ]}
       />
 
