@@ -18,7 +18,7 @@ import { MaterialIcons } from "@expo/vector-icons";
 //called from AllMembers.jsx, MembersOverview and its navigated in HomeStack.jsx
 const UserProfile = ({ navigation, route }) => {
   const { user, fromMembersOverview } = route.params;
-  console.log(" fromMembersOverview:", fromMembersOverview)
+  //console.log(" fromMembersOverview:", fromMembersOverview)
 
   const [showModal, setshowModal] = useState(false);
   const [monthsPaid, setmonthsPaid] = useState([]);

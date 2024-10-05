@@ -18,6 +18,7 @@ const App = () => {
         /*Note: default is white in android and black in ios
                 dark-content: dark color in both
                 ligh-content: white color in both*/
+                translucent={true}
       />
     <RootStack/>
    </NavigationContainer>
