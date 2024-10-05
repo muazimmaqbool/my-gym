@@ -16,7 +16,7 @@ const MembersOverview = ({ navigation }) => {
         onPress={() =>
           navigation.navigate("userProfile", {
             user: item,
-            fromMembersOverview:true,
+            fromMembersOverview: true,
           })
         }
       >
@@ -46,9 +46,16 @@ const MembersOverview = ({ navigation }) => {
           },
           {
             value: "activeMembers",
-            label: `Active (${users && users.filter((user)=>user.isActive===true).length})`,
+            label: `Active (${
+              users && users.filter((user) => user.isActive === true).length
+            })`,
           },
-          { value: "inactiveMembers", label: `InActive (${users && users.filter((user)=>user.isActive===false).length})` },
+          {
+            value: "inactiveMembers",
+            label: `InActive (${
+              users && users.filter((user) => user.isActive === false).length
+            })`,
+          },
         ]}
       />
 
@@ -60,7 +67,7 @@ const MembersOverview = ({ navigation }) => {
             </ScrollView>
           ) : currSegment === "activeMembers" ? (
             <>
-              {users.filter((user)=>user.isActive===true).length > 0 ? (
+              {users.filter((user) => user.isActive === true).length > 0 ? (
                 <ScrollView contentContainerStyle={styles.mainContainer}>
                   {users
                     .filter((user) => user.isActive === true)
@@ -72,7 +79,7 @@ const MembersOverview = ({ navigation }) => {
             </>
           ) : (
             <>
-              {users.filter((user)=>user.isActive===false).length > 0 ? (
+              {users.filter((user) => user.isActive === false).length > 0 ? (
                 <ScrollView contentContainerStyle={styles.mainContainer}>
                   {users
                     .filter((user) => user.isActive === false)
