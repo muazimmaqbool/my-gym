@@ -6,8 +6,9 @@ import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 
 const Dashboard = ({ navigation }) => {
   const renderCard = (title, subTitle,icon,navigateTo) => {
+    const isDisabled = subTitle === "coming soon";
     return (
-     <Pressable onPress={()=>{navigation.navigate(navigateTo)}}>
+     <Pressable disabled={subTitle==="coming soon"} onPress={()=>{navigation.navigate(navigateTo)}}>
        <Card.Title
         title={title}
         subtitle={subTitle}
@@ -16,7 +17,6 @@ const Dashboard = ({ navigation }) => {
           <IconButton {...props} icon="chevron-right" onPress={() => {}} />
         )}
         style={styles.cardStyle}
-        
       />
      </Pressable>
     );
@@ -30,8 +30,8 @@ const Dashboard = ({ navigation }) => {
 
       <View style={styles.mainView}>
         <View style={styles.cardsContainer}>
-          {renderCard("Members Overview","", "account-supervisor","membersOverview")}
-          {renderCard("Staff Management","", "account-tie","staffManagement")}
+          {renderCard("Members Overview"," ", "account-supervisor","membersOverview")}
+          {renderCard("Staff Management"," ", "account-tie","staffManagement")}
           {renderCard("Notifications & Alerts","coming soon", "message-alert","notificationAlerts")}
           {renderCard("Inventory Management","coming soon", "office-building-cog-outline","inventory")}
           {renderCard("Billing and Payments","coming soon", "currency-usd","billings")}
