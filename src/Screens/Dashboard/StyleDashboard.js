@@ -40,6 +40,9 @@ export const styles = StyleSheet.create({
     borderRadius: 10,
     fontWeight: "300",
     color: "#1D1E25",
-    fontSize: 17,
+    fontSize: 170,
+  },
+   disabledColor: { 
+    color:"#808D9E",
   },
 });

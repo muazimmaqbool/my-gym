@@ -11,11 +11,14 @@ const Dashboard = ({ navigation }) => {
      <Pressable disabled={subTitle==="coming soon"} onPress={()=>{navigation.navigate(navigateTo)}}>
        <Card.Title
         title={title}
+        titleStyle={subTitle==="coming soon" && styles.disabledColor}
         subtitle={subTitle}
+        subtitleStyle={subTitle==="coming soon" && styles.disabledColor}
         left={(props) => <Avatar.Icon {...props} icon={icon} />}
         right={(props) => (
-          <IconButton {...props} icon="chevron-right" onPress={() => {}} />
+          <IconButton {...props} icon="chevron-right"   onPress={() => {}} />
         )}
+        
         style={styles.cardStyle}
       />
      </Pressable>
