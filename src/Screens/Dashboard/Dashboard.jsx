@@ -5,12 +5,12 @@ import { styles } from "./StyleDashboard";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 
 const Dashboard = ({ navigation }) => {
-  const renderCard = (title, icon,navigateTo) => {
+  const renderCard = (title, subTitle,icon,navigateTo) => {
     return (
      <Pressable onPress={()=>{navigation.navigate(navigateTo)}}>
        <Card.Title
         title={title}
-        //subtitle="Card Subtitle"
+        subtitle={subTitle}
         left={(props) => <Avatar.Icon {...props} icon={icon} />}
         right={(props) => (
           <IconButton {...props} icon="chevron-right" onPress={() => {}} />
@@ -30,11 +30,11 @@ const Dashboard = ({ navigation }) => {
 
       <View style={styles.mainView}>
         <View style={styles.cardsContainer}>
-          {renderCard("Members Overview", "account-supervisor","membersOverview")}
-          {renderCard("Staff Management", "account-tie","staffManagement")}
-          {renderCard("Notifications & Alerts", "message-alert","notificationAlerts")}
-          {renderCard("Inventory Management", "office-building-cog-outline","inventory")}
-          {renderCard("Billing and Payments", "currency-usd","billings")}
+          {renderCard("Members Overview","", "account-supervisor","membersOverview")}
+          {renderCard("Staff Management","", "account-tie","staffManagement")}
+          {renderCard("Notifications & Alerts","coming soon", "message-alert","notificationAlerts")}
+          {renderCard("Inventory Management","coming soon", "office-building-cog-outline","inventory")}
+          {renderCard("Billing and Payments","coming soon", "currency-usd","billings")}
         </View>
         <Button
           buttonColor="#3a86ff"
