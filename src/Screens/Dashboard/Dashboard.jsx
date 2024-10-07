@@ -7,6 +7,7 @@ import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 const Dashboard = ({ navigation }) => {
   const renderCard = (title, subTitle,icon,navigateTo) => {
     const isDisabled = subTitle === "coming soon";
+    console.log("isDiabled:",isDisabled)
     return (
      <Pressable disabled={subTitle==="coming soon"} onPress={()=>{navigation.navigate(navigateTo)}}>
        <Card.Title
