@@ -29,13 +29,16 @@ const Dashboard = ({ navigation }) => {
       <View style={styles.topBar}>
         <Text style={styles.gymName}>Hi-Life Fitness</Text>
         <Text style={styles.address}>Bilal Abad Sopore</Text>
+        <View>
+          
+        </View>
       </View>
 
       <View style={styles.mainView}>
         <View style={styles.cardsContainer}>
           {renderCard("Members Overview"," ", "account-supervisor","membersOverview")}
           {renderCard("Staff Management"," ", "account-tie","staffManagement")}
-          {renderCard("Notifications & Alerts","coming soon", "message-alert","notificationAlerts")}
+          {renderCard("Notifications Settings","coming soon", "message-alert","notificationAlerts")}
           {renderCard("Inventory Management","coming soon", "office-building-cog-outline","inventory")}
           {renderCard("Billing and Payments","coming soon", "currency-usd","billings")}
         </View>
