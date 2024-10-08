@@ -1,4 +1,4 @@
-import { View, Text, Pressable } from "react-native";
+import { View, Text, Pressable, ScrollView } from "react-native";
 import React from "react";
 import { Avatar, Button, Card, IconButton } from "react-native-paper";
 import { styles } from "./StyleDashboard";
@@ -33,13 +33,13 @@ const Dashboard = ({ navigation }) => {
       </View>
 
       <View style={styles.mainView}>
-        <View style={styles.cardsContainer}>
+        <ScrollView contentContainerStyle={styles.cardsContainer}>
           {renderCard("Members Overview"," ", "account-supervisor","membersOverview")}
           {renderCard("Staff Management"," ", "account-tie","staffManagement")}
           {renderCard("Notifications Settings","coming soon", "message-alert","notificationAlerts")}
           {renderCard("Inventory Management","coming soon", "office-building-cog-outline","inventory")}
           {renderCard("Billing and Payments","coming soon", "currency-usd","billings")}
-        </View>
+        </ScrollView>
         <Button
           buttonColor="#3a86ff"
           icon="home"

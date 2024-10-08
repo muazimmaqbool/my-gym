@@ -93,7 +93,7 @@ const HomeStack = () => {
         name="settings"
         component={Settings}
         options={{
-          headerShown: true,
+          headerShown: false,
           title: "Settings",
           headerShadowVisible: false,
         }}
