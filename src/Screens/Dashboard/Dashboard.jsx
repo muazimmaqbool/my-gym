@@ -3,7 +3,7 @@ import React from "react";
 import { Avatar, Button, Card, IconButton } from "react-native-paper";
 import { styles } from "./StyleDashboard";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
-import { Feather } from "@expo/vector-icons";
+import { AntDesign, Feather } from "@expo/vector-icons";
 
 const Dashboard = ({ navigation }) => {
   const renderCard = (title, subTitle,icon,navigateTo) => {
@@ -28,6 +28,16 @@ const Dashboard = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <View style={styles.topBar}>
+      <View style={styles.topBtns}>
+          <Pressable onPress={()=>navigation.navigate("homeScreen")} style={styles.btn}>
+          <AntDesign name="back" size={20} color="white" />
+            <Text style={styles.btnText}>Home</Text>
+          </Pressable>
+          <Pressable onPress={()=>{navigation.navigate("settings")}} style={styles.btn}>
+            <Text style={styles.btnText}>Settings</Text>
+            <Feather name="settings" size={20} color="white" />
+          </Pressable>
+        </View>
         <Text style={styles.gymName}>Hi-Life Fitness</Text>
         <Text style={styles.address}>Bilal Abad Sopore</Text>
       </View>
@@ -40,7 +50,7 @@ const Dashboard = ({ navigation }) => {
           {renderCard("Inventory Management","coming soon", "office-building-cog-outline","inventory")}
           {renderCard("Billing and Payments","coming soon", "currency-usd","billings")}
         </ScrollView>
-        <Button
+        {/* <Button
           buttonColor="#3a86ff"
           icon="home"
           mode="contained"
@@ -48,7 +58,7 @@ const Dashboard = ({ navigation }) => {
           onPress={() => navigation.navigate("homeScreen")}
         >
           Return To Home
-        </Button>
+        </Button> */}
       </View>
     </View>
   );
