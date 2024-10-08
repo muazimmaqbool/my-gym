@@ -10,7 +10,31 @@ export const styles = StyleSheet.create({
       topBar: {
         height: "25%",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent:"flex-end",
+        paddingVertical:30,
+      },
+      topBtns:{
+        flexDirection:"row",
+        justifyContent:"space-between",
+        width:"100%",
+        paddingHorizontal:30,
+        paddingVertical:20,
+      },
+      btn:{
+        flexDirection:"row",
+        justifyContent:"center",
+        alignItems:"center",
+        gap:5,
+        borderColor:"white",
+        borderWidth:1,
+        borderRadius:50,
+        paddingVertical:5,
+        paddingHorizontal:10,
+      },
+      btnText:{
+        fontWeight: "400",
+        color: "#F9FAFB",
+        fontSize: 14,
       },
       gymName: {
         fontWeight: "700",
