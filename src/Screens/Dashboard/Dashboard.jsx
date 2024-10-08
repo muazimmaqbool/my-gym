@@ -3,6 +3,7 @@ import React from "react";
 import { Avatar, Button, Card, IconButton } from "react-native-paper";
 import { styles } from "./StyleDashboard";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
+import { Feather } from "@expo/vector-icons";
 
 const Dashboard = ({ navigation }) => {
   const renderCard = (title, subTitle,icon,navigateTo) => {
@@ -29,9 +30,6 @@ const Dashboard = ({ navigation }) => {
       <View style={styles.topBar}>
         <Text style={styles.gymName}>Hi-Life Fitness</Text>
         <Text style={styles.address}>Bilal Abad Sopore</Text>
-        <View>
-          
-        </View>
       </View>
 
       <View style={styles.mainView}>
