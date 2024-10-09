@@ -11,7 +11,7 @@ export const styles = StyleSheet.create({
         height: "25%",
         alignItems: "center",
         justifyContent:"flex-end",
-        paddingVertical:30,
+        paddingVertical:20,
       },
       topBtns:{
         flexDirection:"row",
