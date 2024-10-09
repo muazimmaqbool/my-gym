@@ -56,4 +56,20 @@ export const styles = StyleSheet.create({
         paddingTop: 40,
         justifyContent: "space-between",
       },
+      editModal:{
+        zIndex:5,
+        marginTop:1,
+        backgroundColor: "white",
+        width: "80%",
+        height:"50%",
+        alignSelf: "center",
+        padding: 15,
+        borderRadius: 20,
+      },
+      modalContentContainer: {
+        height: "100%",
+        justifyContent: "space-between",
+        alignItems: "center",
+        gap:10
+      },
 })
