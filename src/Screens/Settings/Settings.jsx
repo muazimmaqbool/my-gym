@@ -57,6 +57,19 @@ const Settings = ({ navigation }) => {
             {renderField("District/Town","Sopore")}
             {renderField("State","Jammu and Kashmir")}
           </View>
+          <View style={styles.modalButtons}>
+            <Button mode="outlined" onPress={() => setshowModal(false)}>
+              Back
+            </Button>
+            <Button
+              mode="contained"
+              buttonColor="#3a86ff"
+              onPress={() => setshowModal(false)}
+              
+            >
+              Save
+            </Button>
+          </View>
         </View>
       </Modal>
     </View>

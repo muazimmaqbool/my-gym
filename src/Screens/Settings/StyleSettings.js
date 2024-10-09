@@ -61,17 +61,17 @@ export const styles = StyleSheet.create({
         marginTop:1,
         backgroundColor: "white",
         width: "80%",
-        height:"50%",
+        height:"46%",
         alignSelf: "center",
         padding: 15,
         borderRadius: 20,
       },
       modalContentContainer: {
         height: "100%",
-        //justifyContent: "space-between",
+        justifyContent: "center",
         alignItems: "center",
-        gap:10,
         paddingHorizontal:10,
+        gap:15
       },
       boldText: {
         fontWeight: "500",
@@ -86,5 +86,11 @@ export const styles = StyleSheet.create({
       inputFields:{
         width:"100%",
         gap:10
-      }
+      },
+      modalButtons:{
+        flexDirection:"row",
+        alignItems: "center",
+        justifyContent:"center",
+        gap:30
+      },
 })
