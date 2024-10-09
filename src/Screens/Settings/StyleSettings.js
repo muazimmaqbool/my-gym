@@ -68,8 +68,23 @@ export const styles = StyleSheet.create({
       },
       modalContentContainer: {
         height: "100%",
-        justifyContent: "space-between",
+        //justifyContent: "space-between",
         alignItems: "center",
-        gap:10
+        gap:10,
+        paddingHorizontal:10,
       },
+      boldText: {
+        fontWeight: "500",
+        color: "#1D1E25",
+        fontSize: 16,
+      },
+      textInput:{
+        width:"100%",
+        height:40,
+        fontSize:16
+      },
+      inputFields:{
+        width:"100%",
+        gap:10
+      }
 })

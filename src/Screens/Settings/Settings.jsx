@@ -1,12 +1,26 @@
 import { View, Text, Pressable } from "react-native";
 import React, { useState } from "react";
 import { styles } from "./StyleSettings";
-import { Button, Modal } from "react-native-paper";
+import { Button, Modal, TextInput } from "react-native-paper";
 import { AntDesign, Feather, Ionicons } from "@expo/vector-icons";
 
 //called from HomeScreen and its navigated in HomeStack.jsx
 const Settings = ({ navigation }) => {
   const [showModal, setshowModal] = useState(false);
+
+  const renderField = (label,value) => {
+    return (
+      <TextInput
+        value={value}
+        //onChangeText={handleSearchText}
+        mode="outlined"
+        label={label}
+        outlineColor="#3a86ff"
+        activeOutlineColor="#3a86ff"
+        style={styles.textInput}
+      />
+    );
+  };
 
   return (
     <View style={styles.container}>
@@ -36,7 +50,13 @@ const Settings = ({ navigation }) => {
         contentContainerStyle={styles.editModal}
       >
         <View style={styles.modalContentContainer}>
-          <Text>Edit Gym Details</Text>
+          <Text style={styles.boldText}>Edit Gym Details</Text>
+          <View style={styles.inputFields}>
+            {renderField("Name","Hi-Life Fitness")}
+            {renderField("Address","Bilal Abad")}
+            {renderField("District/Town","Sopore")}
+            {renderField("State","Jammu and Kashmir")}
+          </View>
         </View>
       </Modal>
     </View>
