@@ -8,7 +8,7 @@ export const styles = StyleSheet.create({
      backgroundColor: "#3a86ff",
   },
   topBar: {
-    height: "30%",
+    height: "25%",
     alignItems: "center",
     justifyContent: "center",
   },
