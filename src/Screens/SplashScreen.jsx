@@ -3,6 +3,7 @@ import React from "react";
 import { Button } from "react-native-paper";
 const splashScreenImg = require("../../assets/images/splashScreen2.png");
 
+//called from App.jsx 
 export default function SplashScreen({ navigation }) {
   return (
     <View style={styles.container}>
