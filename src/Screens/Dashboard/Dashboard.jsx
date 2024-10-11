@@ -5,6 +5,7 @@ import { styles } from "./StyleDashboard";
 import FontAwesome6 from "@expo/vector-icons/FontAwesome6";
 import { AntDesign, Feather } from "@expo/vector-icons";
 
+//called from HomeScreen and its navigated in HomeStack
 const Dashboard = ({ navigation }) => {
   const renderCard = (title, subTitle,icon,navigateTo) => {
     const isDisabled = subTitle === "coming soon";
