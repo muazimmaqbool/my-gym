@@ -12,23 +12,12 @@ export default function SplashScreen({ navigation }) {
         <Text style={[styles.tagline,styles.text]}>Manage & Grow</Text>
       </View>
       <Button
-      buttonColor="#3a86ff"
-        contentStyle={{ flexDirection: "row-reverse" }}
-        mode="contained"
-        icon={"location-enter"}
-        onPress={() => {
-          navigation.navigate("front");
-        }}
-      >
-        Get Started
-      </Button>
-      <Button
         mode="contained"
         onPress={() => {
           navigation.navigate("homeStack");
         }}
       >
-        Home
+        Get Started
       </Button>
     </View>
   );
