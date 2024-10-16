@@ -57,8 +57,8 @@ const HomeScreen = ({ navigation }) => {
         style={styles.bgImage}
       > */}
         <View style={styles.topBar}>
-          <Text style={styles.gymName}>Hi Life Fitness</Text>
-          <Text style={styles.address}>Bilal Abad Sopore</Text>
+          <Text style={styles.gymName}>Hi-Life Fitness</Text>
+          <Text style={styles.address}>Bilal-Abad Sopore</Text>
         </View>
 
         <View style={styles.mainView}>
