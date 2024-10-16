@@ -1,7 +1,7 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 
-//called from HomeScreen and Allmembers and its navigated in HomeStack.jsx
+//called from HomeScreen and its navigated in HomeStack.jsx
 const Notifications = () => {
   return (
     <View>
