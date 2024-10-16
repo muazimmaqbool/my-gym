@@ -4,6 +4,7 @@ import { styles } from "./StyleMembersOverView";
 import { Avatar, SegmentedButtons } from "react-native-paper";
 import users from "../../dummyUsers";
 
+//called from dashboard and its navigated in HomeStack.jsx
 const MembersOverview = ({ navigation }) => {
   const [currSegment, setcurrSegment] = useState("allMembers");
   //console.log("currSegment", currSegment)
