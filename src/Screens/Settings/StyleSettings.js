@@ -83,6 +83,11 @@ export const styles = StyleSheet.create({
         height:40,
         fontSize:16
       },
+      credentialInput:{
+        width:"90%",
+        height:30,
+        fontSize:15
+      },
       inputFields:{
         width:"100%",
         gap:10
@@ -95,7 +100,7 @@ export const styles = StyleSheet.create({
       },
       credentials:{
         borderRadius: 10,
-        paddingVertical: 15,
+        paddingVertical: 10,
         justifyContent: "center",
         alignItems: "center",
         gap: 10,
@@ -105,7 +110,7 @@ export const styles = StyleSheet.create({
         borderLeftWidth: 1,
         borderRightWidth: 1,
         borderBottomWidth: 1,
-    
+        
         shadowOffset: { width: 1, height: 1 },
         shadowOpacity: 0.8,
         shadowRadius: 1,

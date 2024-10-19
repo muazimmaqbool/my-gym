@@ -31,7 +31,8 @@ const Settings = ({ navigation }) => {
         label={label}
         outlineColor="#3a86ff"
         activeOutlineColor="#3a86ff"
-       
+        style={styles.credentialInput}
+        
       />
     );
   };
