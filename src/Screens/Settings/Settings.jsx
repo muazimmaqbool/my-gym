@@ -22,6 +22,20 @@ const Settings = ({ navigation }) => {
     );
   };
 
+  const renderCredentialField = (label,value) => {
+    return (
+      <TextInput
+        value={value}
+        //onChangeText={handleSearchText}
+        mode="outlined"
+        label={label}
+        outlineColor="#3a86ff"
+        activeOutlineColor="#3a86ff"
+       
+      />
+    );
+  };
+
   return (
     <View style={styles.container}>
       <View style={styles.topBar}>
@@ -42,7 +56,17 @@ const Settings = ({ navigation }) => {
         <Text style={styles.gymName}>Hi-Life Fitness</Text>
         <Text style={styles.address}>Bilal Abad Sopore</Text>
       </View>
-      <View style={styles.mainView}></View>
+      <View style={styles.mainView}>
+
+        <View style={styles.credentials}>
+        {renderCredentialField("Email","hilifefitness23@gmail.com")}
+        {renderCredentialField("Password","*****")}
+        </View>
+        {/* <View style={styles.userInfo}>
+
+        </View> */}
+
+      </View>
 
       <Modal
         visible={showModal}

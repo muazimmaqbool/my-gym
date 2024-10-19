@@ -48,5 +48,6 @@ export const styles = StyleSheet.create({
     fontWeight: "300",
     color: "#1D1E25",
     fontSize: 17,
-  }
+  },
+ 
 });

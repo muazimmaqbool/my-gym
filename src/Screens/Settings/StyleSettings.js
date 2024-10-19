@@ -93,4 +93,23 @@ export const styles = StyleSheet.create({
         justifyContent:"center",
         gap:30
       },
+      credentials:{
+        borderRadius: 10,
+        paddingVertical: 15,
+        justifyContent: "center",
+        alignItems: "center",
+        gap: 10,
+        borderLeftColor: "#DBDBDB",
+        borderRightColor: "#DBDBDB",
+        borderBottomColor: "#DBDBDB",
+        borderLeftWidth: 1,
+        borderRightWidth: 1,
+        borderBottomWidth: 1,
+    
+        shadowOffset: { width: 1, height: 1 },
+        shadowOpacity: 0.8,
+        shadowRadius: 1,
+        elevation: 1,
+        shadowColor: "#DBDBDB40",
+      }
 })
