@@ -59,11 +59,12 @@ const Settings = ({ navigation }) => {
       </View>
       <View style={styles.mainView}>
         <Button
+        contentStyle={{ flexDirection: "row-reverse" }}
           icon="square-edit-outline"
           mode="text"
           onPress={() => console.log("Pressed")}
         >
-          Press me
+          EDIT CREDENTIALS
         </Button>
         <View style={styles.credentials}>
           {renderCredentialField("Email", "hilifefitness23@gmail.com")}
