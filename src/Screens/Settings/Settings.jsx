@@ -8,6 +8,8 @@ import { AntDesign, Feather, Ionicons } from "@expo/vector-icons";
 const Settings = ({ navigation }) => {
   const [showModal, setshowModal] = useState(false);
 
+  const [isEditCredentials, setisEditCredentials] = useState(false);
+
   const renderField = (label, value) => {
     return (
       <TextInput
@@ -32,7 +34,7 @@ const Settings = ({ navigation }) => {
         outlineColor="#3a86ff"
         activeOutlineColor="#3a86ff"
         style={styles.credentialInput}
-        readOnly
+        readOnly={!isEditCredentials}
       />
     );
   };
@@ -58,18 +60,25 @@ const Settings = ({ navigation }) => {
         <Text style={styles.address}>Bilal Abad Sopore</Text>
       </View>
       <View style={styles.mainView}>
-       
         <View style={styles.credentials}>
           <Button
-          contentStyle={{ flexDirection: "row-reverse" }}
+            contentStyle={{ flexDirection: "row-reverse" }}
             icon="square-edit-outline"
             mode="text"
-            onPress={() => console.log("Pressed")}
+            onPress={() => setisEditCredentials(true)}
           >
             EDIT CREDENTIALS
           </Button>
           {renderCredentialField("Email", "hilifefitness23@gmail.com")}
           {renderCredentialField("Password", "*****")}
+          <Button
+            contentStyle={{ flexDirection: "row-reverse" }}
+            icon="square-edit-outline"
+            mode="contained"
+            onPress={() => setisEditCredentials(false)}
+          >
+            SAVE
+          </Button>
         </View>
         {/* <View style={styles.userInfo}>
 
