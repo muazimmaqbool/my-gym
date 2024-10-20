@@ -71,14 +71,16 @@ const Settings = ({ navigation }) => {
           </Button>
           {renderCredentialField("Email", "hilifefitness23@gmail.com")}
           {renderCredentialField("Password", "*****")}
-          <Button
-            contentStyle={{ flexDirection: "row-reverse" }}
-            icon="square-edit-outline"
-            mode="contained"
-            onPress={() => setisEditCredentials(false)}
-          >
-            SAVE
-          </Button>
+         {
+          isEditCredentials &&  <Button
+          contentStyle={{ flexDirection: "row-reverse" }}
+          icon="square-edit-outline"
+          mode="contained"
+          onPress={() => setisEditCredentials(false)}
+        >
+          SAVE
+        </Button>
+         }
         </View>
         {/* <View style={styles.userInfo}>
 
