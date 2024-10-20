@@ -8,7 +8,7 @@ import { AntDesign, Feather, Ionicons } from "@expo/vector-icons";
 const Settings = ({ navigation }) => {
   const [showModal, setshowModal] = useState(false);
 
-  const renderField = (label,value) => {
+  const renderField = (label, value) => {
     return (
       <TextInput
         value={value}
@@ -22,7 +22,7 @@ const Settings = ({ navigation }) => {
     );
   };
 
-  const renderCredentialField = (label,value) => {
+  const renderCredentialField = (label, value) => {
     return (
       <TextInput
         value={value}
@@ -49,7 +49,7 @@ const Settings = ({ navigation }) => {
             {/* <Ionicons name="arrow-back-circle-outline" size={24} color="black" /> */}
             <Text style={styles.btnText}>Home</Text>
           </Pressable>
-          <Pressable style={styles.btn} onPress={()=>setshowModal(true)}>
+          <Pressable style={styles.btn} onPress={() => setshowModal(true)}>
             <Text style={styles.btnText}>Edit</Text>
             <Feather name="edit" size={20} color="white" />
           </Pressable>
@@ -58,15 +58,20 @@ const Settings = ({ navigation }) => {
         <Text style={styles.address}>Bilal Abad Sopore</Text>
       </View>
       <View style={styles.mainView}>
-
+        <Button
+          icon="square-edit-outline"
+          mode="text"
+          onPress={() => console.log("Pressed")}
+        >
+          Press me
+        </Button>
         <View style={styles.credentials}>
-        {renderCredentialField("Email","hilifefitness23@gmail.com")}
-        {renderCredentialField("Password","*****")}
+          {renderCredentialField("Email", "hilifefitness23@gmail.com")}
+          {renderCredentialField("Password", "*****")}
         </View>
         {/* <View style={styles.userInfo}>
 
         </View> */}
-
       </View>
 
       <Modal
@@ -77,10 +82,10 @@ const Settings = ({ navigation }) => {
         <View style={styles.modalContentContainer}>
           <Text style={styles.boldText}>Edit Gym Details</Text>
           <View style={styles.inputFields}>
-            {renderField("Name","Hi-Life Fitness")}
-            {renderField("Address","Bilal Abad")}
-            {renderField("District/Town","Sopore")}
-            {renderField("State","Jammu and Kashmir")}
+            {renderField("Name", "Hi-Life Fitness")}
+            {renderField("Address", "Bilal Abad")}
+            {renderField("District/Town", "Sopore")}
+            {renderField("State", "Jammu and Kashmir")}
           </View>
           <View style={styles.modalButtons}>
             <Button mode="outlined" onPress={() => setshowModal(false)}>
@@ -90,7 +95,6 @@ const Settings = ({ navigation }) => {
               mode="contained"
               buttonColor="#3a86ff"
               onPress={() => setshowModal(false)}
-              
             >
               Save
             </Button>
