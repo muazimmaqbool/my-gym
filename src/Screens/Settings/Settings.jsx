@@ -58,15 +58,16 @@ const Settings = ({ navigation }) => {
         <Text style={styles.address}>Bilal Abad Sopore</Text>
       </View>
       <View style={styles.mainView}>
-        <Button
-        contentStyle={{ flexDirection: "row-reverse" }}
-          icon="square-edit-outline"
-          mode="text"
-          onPress={() => console.log("Pressed")}
-        >
-          EDIT CREDENTIALS
-        </Button>
+       
         <View style={styles.credentials}>
+          <Button
+          contentStyle={{ flexDirection: "row-reverse" }}
+            icon="square-edit-outline"
+            mode="text"
+            onPress={() => console.log("Pressed")}
+          >
+            EDIT CREDENTIALS
+          </Button>
           {renderCredentialField("Email", "hilifefitness23@gmail.com")}
           {renderCredentialField("Password", "*****")}
         </View>
