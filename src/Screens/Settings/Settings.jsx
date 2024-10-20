@@ -74,9 +74,10 @@ const Settings = ({ navigation }) => {
          {
           isEditCredentials &&  <Button
           contentStyle={{ flexDirection: "row-reverse" }}
-          icon="square-edit-outline"
+          icon="content-save-check"
           mode="contained"
           onPress={() => setisEditCredentials(false)}
+          buttonColor="#3a86ff"
         >
           SAVE
         </Button>
