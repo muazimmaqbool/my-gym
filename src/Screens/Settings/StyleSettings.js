@@ -132,7 +132,7 @@ export const styles = StyleSheet.create({
     borderLeftWidth: 1,
     borderRightWidth: 1,
     borderTopWidth: 1,
-
+    paddingHorizontal:30,
     shadowOffset: { width: 1, height: 1 },
     shadowOpacity: 0.8,
     shadowRadius: 1,
@@ -142,10 +142,12 @@ export const styles = StyleSheet.create({
   feeRow:{
     flexDirection:"row",
     alignItems:"center",
-    width:"50%",
-    justifyContent:"center",
+    width:"100%",
+    justifyContent:"space-around",
   },
   feeText:{
-    
+    fontSize:16,
+    fontWeight:"400",
+    color: "#0000009E",
   }
 });
