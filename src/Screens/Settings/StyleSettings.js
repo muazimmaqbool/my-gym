@@ -144,11 +144,12 @@ export const styles = StyleSheet.create({
     alignItems:"center",
     width:"60%",
     justifyContent:"center",
-    gap:10
+    gap:5
   },
   feeText:{
     fontSize:16,
     fontWeight:"400",
     color: "#0000009E",
+    width:"80%"
   }
 });
