@@ -138,5 +138,14 @@ export const styles = StyleSheet.create({
     shadowRadius: 1,
     elevation: 1,
     shadowColor: "#DBDBDB40",
+  },
+  feeRow:{
+    flexDirection:"row",
+    alignItems:"center",
+    width:"50%",
+    justifyContent:"center",
+  },
+  feeText:{
+    
   }
 });

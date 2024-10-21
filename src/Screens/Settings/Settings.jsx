@@ -41,7 +41,9 @@ const Settings = ({ navigation }) => {
   };
   const renderFeeField = (label, value) => {
     return (
-      <TextInput
+      <View style={styles.feeRow}>
+        <Text style={styles.feeText}>Monthly Fee</Text>
+        <TextInput
         value={value}
         //onChangeText={handleSearchText}
         mode="outlined"
@@ -51,6 +53,7 @@ const Settings = ({ navigation }) => {
         style={styles.credentialInput}
         readOnly={!isEditFee}
       />
+      </View>
     );
   };
 
