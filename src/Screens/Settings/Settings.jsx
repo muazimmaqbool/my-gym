@@ -112,8 +112,8 @@ const Settings = ({ navigation }) => {
           >
             EDIT FEE STRUCTURE
           </Button>
-          {renderFeeField("Email", "hilifefitness23@gmail.com")}
-          {renderFeeField("Password", "*****")}
+          {renderFeeField("Monthly", "Rs 1000")}
+          {renderFeeField("3 Months Fee", "Rs 2500")}
          {
           isEditFee &&  <Button
           contentStyle={{ flexDirection: "row-reverse" }}

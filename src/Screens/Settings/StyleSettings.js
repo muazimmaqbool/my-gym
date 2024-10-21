@@ -121,10 +121,10 @@ export const styles = StyleSheet.create({
   otherGymInfo:{
     borderRadius: 10,
     paddingBottom: 10,
-    flexDirection: "row",
-    flexWrap: "wrap",
+    flexDirection: "column",
+    
+    alignItems:"center",
     justifyContent: "center",
-    alignItems: "flex-start",
     gap: 10,
     borderLeftColor: "#DBDBDB",
     borderRightColor: "#DBDBDB",
@@ -142,8 +142,9 @@ export const styles = StyleSheet.create({
   feeRow:{
     flexDirection:"row",
     alignItems:"center",
-    width:"100%",
-    justifyContent:"space-around",
+    width:"50%",
+    justifyContent:"center",
+    gap:10
   },
   feeText:{
     fontSize:16,
