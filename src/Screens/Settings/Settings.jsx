@@ -9,6 +9,7 @@ const Settings = ({ navigation }) => {
   const [showModal, setshowModal] = useState(false);
 
   const [isEditCredentials, setisEditCredentials] = useState(false);
+  const [isEditFee, setisEditFee] = useState(false);
 
   const renderField = (label, value) => {
     return (
@@ -38,6 +39,20 @@ const Settings = ({ navigation }) => {
       />
     );
   };
+  const renderFeeField = (label, value) => {
+    return (
+      <TextInput
+        value={value}
+        //onChangeText={handleSearchText}
+        mode="outlined"
+        label={label}
+        outlineColor="#3a86ff"
+        activeOutlineColor="#3a86ff"
+        style={styles.credentialInput}
+        readOnly={!isEditFee}
+      />
+    );
+  };
 
   return (
     <View style={styles.container}>
@@ -60,6 +75,7 @@ const Settings = ({ navigation }) => {
         <Text style={styles.address}>Bilal Abad Sopore</Text>
       </View>
       <View style={styles.mainView}>
+
         <View style={styles.credentials}>
           <Button
             contentStyle={{ flexDirection: "row-reverse" }}
@@ -83,9 +99,30 @@ const Settings = ({ navigation }) => {
         </Button>
          }
         </View>
-        {/* <View style={styles.userInfo}>
 
-        </View> */}
+        <View style={styles.otherGymInfo}>
+        <Button
+            contentStyle={{ flexDirection: "row-reverse" }}
+            icon="square-edit-outline"
+            mode="text"
+            onPress={() => setisEditFee(true)}
+          >
+            EDIT FEE STRUCTURE
+          </Button>
+          {renderFeeField("Email", "hilifefitness23@gmail.com")}
+          {renderFeeField("Password", "*****")}
+         {
+          isEditFee &&  <Button
+          contentStyle={{ flexDirection: "row-reverse" }}
+          icon="content-save-check"
+          mode="contained"
+          onPress={() => setisEditFee(false)}
+          buttonColor="#3a86ff"
+        >
+          SAVE
+        </Button>
+         }
+        </View>
       </View>
 
       <Modal

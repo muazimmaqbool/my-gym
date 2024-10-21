@@ -96,6 +96,7 @@ export const styles = StyleSheet.create({
     borderTopLeftRadius: 50,
     paddingVertical: 15,
     paddingHorizontal: 30,
+    gap:15,
     // justifyContent: "space-between",
   },
   credentials: {
@@ -117,4 +118,25 @@ export const styles = StyleSheet.create({
     elevation: 1,
     shadowColor: "#DBDBDB40",
   },
+  otherGymInfo:{
+    borderRadius: 10,
+    paddingBottom: 10,
+    flexDirection: "row",
+    flexWrap: "wrap",
+    justifyContent: "center",
+    alignItems: "flex-start",
+    gap: 10,
+    borderLeftColor: "#DBDBDB",
+    borderRightColor: "#DBDBDB",
+    borderTopColor: "#DBDBDB",
+    borderLeftWidth: 1,
+    borderRightWidth: 1,
+    borderTopWidth: 1,
+
+    shadowOffset: { width: 1, height: 1 },
+    shadowOpacity: 0.8,
+    shadowRadius: 1,
+    elevation: 1,
+    shadowColor: "#DBDBDB40",
+  }
 });
