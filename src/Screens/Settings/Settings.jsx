@@ -42,7 +42,7 @@ const Settings = ({ navigation }) => {
   const renderFeeField = (label, value) => {
     return (
       <View style={styles.feeRow}>
-        <Text style={styles.feeText}>Monthly Fee</Text>
+        <Text style={styles.feeText}>{label}</Text>
         <TextInput
         value={value}
         //onChangeText={handleSearchText}
@@ -112,8 +112,11 @@ const Settings = ({ navigation }) => {
           >
             EDIT FEE STRUCTURE
           </Button>
-          {renderFeeField("Monthly", "Rs 1000")}
+          {renderFeeField("Admission Fee", "FREE")}
+          {renderFeeField("Monthly Fee", "Rs 1000")}
           {renderFeeField("3 Months Fee", "Rs 2500")}
+          {renderFeeField("6 Months Fee", "Rs 4500")}
+          {renderFeeField("Yearly Fee", "Rs 9000")}
          {
           isEditFee &&  <Button
           contentStyle={{ flexDirection: "row-reverse" }}

@@ -142,7 +142,7 @@ export const styles = StyleSheet.create({
   feeRow:{
     flexDirection:"row",
     alignItems:"center",
-    width:"50%",
+    width:"60%",
     justifyContent:"center",
     gap:10
   },
