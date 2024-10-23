@@ -106,8 +106,8 @@ const HomeScreen = ({ navigation }) => {
           />
         </View>
       {/* </ImageBackground> */}
-      <View>
-        <Text>Developed By <Text>Muazim Maqbool</Text></Text>
+      <View style={styles.developerInfo}>
+        <Text style={styles.devText}>Developed By <Text style={styles.devName}>Muazim Maqbool</Text></Text>
       </View>
     </SafeAreaView>
   );

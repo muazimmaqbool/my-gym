@@ -49,5 +49,17 @@ export const styles = StyleSheet.create({
     color: "#1D1E25",
     fontSize: 17,
   },
+  developerInfo:{
+    backgroundColor: "#FFFFFF",
+    alignItems: "center",
+    paddingBottom:15,
+  },
+  devText:{
+    color:"#0000009E"
+  },
+  devName:{
+    borderBottomColor:"#000000",
+    borderBottomWidth:1,
+  }
  
 });
