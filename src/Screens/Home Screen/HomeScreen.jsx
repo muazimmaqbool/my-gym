@@ -106,6 +106,9 @@ const HomeScreen = ({ navigation }) => {
           />
         </View>
       {/* </ImageBackground> */}
+      <View>
+        <Text>Developed By <Text>Muazim Maqbool</Text></Text>
+      </View>
     </SafeAreaView>
   );
 };
