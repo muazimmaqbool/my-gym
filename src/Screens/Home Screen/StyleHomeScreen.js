@@ -60,6 +60,7 @@ export const styles = StyleSheet.create({
   devName:{
     borderBottomColor:"#000000",
     borderBottomWidth:1,
+    fontWeight:"400"
   }
  
 });
