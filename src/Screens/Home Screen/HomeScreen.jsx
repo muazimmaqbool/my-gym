@@ -5,7 +5,8 @@ import {
   Platform,
   Pressable,
   ImageBackground,
-  Animated
+  Animated,
+  Linking
 } from "react-native";
 import React, { useEffect, useRef } from "react";
 import { styles } from "./StyleHomeScreen";
@@ -108,7 +109,10 @@ const HomeScreen = ({ navigation }) => {
       {/* </ImageBackground> */}
       <View style={styles.developerInfo}>
         <Text style={styles.devText}>Developed By</Text>
-        <Text style={styles.devName}>Muazim Maqbool</Text>
+        <Pressable onPress={() => Linking.openURL("https://muaizm.com/")}>
+          <Text style={styles.devName}>Muazim Maqbool</Text>
+        </Pressable>
+
       </View>
     </SafeAreaView>
   );
