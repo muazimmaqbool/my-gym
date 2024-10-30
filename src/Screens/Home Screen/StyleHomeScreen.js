@@ -50,12 +50,16 @@ export const styles = StyleSheet.create({
     fontSize: 17,
   },
   developerInfo:{
-    backgroundColor: "#FFFFFF",
+    flexDirection:"row",
+    justifyContent:"center",
+    gap:5,
     alignItems: "center",
+    backgroundColor: "#FFFFFF",
     paddingBottom:15,
   },
   devText:{
-    color:"#0000009E"
+    color:"#0000009E",
+    fontWeight:"400"
   },
   devName:{
     borderBottomColor:"#000000",
