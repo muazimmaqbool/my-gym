@@ -12,6 +12,7 @@ import React, { useEffect, useRef } from "react";
 import { styles } from "./StyleHomeScreen";
 import AntDesign from "@expo/vector-icons/AntDesign";
 import {
+  Entypo,
   Feather,
   Ionicons,
   MaterialCommunityIcons,
@@ -30,6 +31,7 @@ const HomeScreen = ({ navigation }) => {
   ->new Animated.Value(200):creates a new animated value that represents the starting position below 200 vertically
   */
   const pressableAnimations = [
+    useRef(new Animated.Value(200)).current,
     useRef(new Animated.Value(200)).current,
     useRef(new Animated.Value(200)).current,
     useRef(new Animated.Value(200)).current,
@@ -104,6 +106,13 @@ const HomeScreen = ({ navigation }) => {
             icon={<Ionicons name="settings" size={24} color="#172B85" />}
             text="Settings"
             onPress={() => navigation.navigate("settings")}
+          />
+
+            <AnimatedPressable
+            animation={pressableAnimations[5]}
+            icon={<Entypo name="help-with-circle" size={24} color="#00A8FF" />}
+            text="Help/Support"
+            onPress={() =>console.log("clicked") }
           />
         </View>
       {/* </ImageBackground> */}
