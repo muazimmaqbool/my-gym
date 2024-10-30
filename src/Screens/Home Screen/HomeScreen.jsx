@@ -112,13 +112,13 @@ const HomeScreen = ({ navigation }) => {
             animation={pressableAnimations[5]}
             icon={<Entypo name="help-with-circle" size={24} color="#00A8FF" />}
             text="Help/Support"
-            onPress={() =>console.log("clicked") }
+            onPress={() =>Linking}
           />
         </View>
       {/* </ImageBackground> */}
       <View style={styles.developerInfo}>
         <Text style={styles.devText}>Developed By</Text>
-        <Pressable onPress={() => Linking.openURL("https://muaizm.com/")}>
+        <Pressable onPress={() => Linking.openURL("mailto:mail@muaizm.com")}>
           <Text style={styles.devName}>Muazim Maqbool</Text>
         </Pressable>
 
