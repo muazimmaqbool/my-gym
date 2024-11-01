@@ -62,8 +62,7 @@ export const styles = StyleSheet.create({
     fontWeight:"400"
   },
   devName:{
-    borderBottomColor:"#000000",
-    borderBottomWidth:1,
+    color:"#3a86ff",
     fontWeight:"400"
   }
  
