@@ -4,8 +4,8 @@ import React from 'react'
 //called from HomeScreen and its navigated in HomeStack.jsx
 const Notifications = () => {
   return (
-    <View>
-      <Text>Notifications</Text>
+    <View style={{flex:1,alignItems:"center",justifyContent:"center"}}>
+      <Text>Coming Soon</Text>
     </View>
   )
 }
