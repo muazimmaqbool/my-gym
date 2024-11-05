@@ -38,7 +38,6 @@ const AllMembers = ({ navigation }) => {
           onChangeText={handleSearchText}
           mode="outlined"
           label="Search Member"
-          placeholder="Eg: Muazim Maqbool"
           right={<TextInput.Icon icon="account-search-outline" />}
           outlineColor="#3a86ff"
           activeOutlineColor="#3a86ff"
