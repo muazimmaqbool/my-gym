@@ -66,9 +66,8 @@ export const styles=StyleSheet.create({
         textAlign:"center"
       },
       status:{
-        fontWeight:"400",
-        fontSize:13,
-        
+        fontWeight:"500",
+        fontSize:12,
       }
 
 })
