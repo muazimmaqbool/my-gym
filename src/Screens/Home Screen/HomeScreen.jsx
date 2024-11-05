@@ -131,7 +131,7 @@ const AnimatedPressable = ({ animation, icon, text, onPress }) => {
     <Animated.View style={{ transform: [{ translateY: animation }] }}>
       <Pressable style={styles.fieldContainer} onPress={onPress}>
         {icon}
-        <Text style={styles.fieldText}>{text}</Text>
+        <Text style={styles.fieldText}>{text} ({text==="Notifications/Alerts" && "coming soon"})</Text>
       </Pressable>
     </Animated.View>
   );
