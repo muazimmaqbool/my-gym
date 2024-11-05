@@ -91,6 +91,7 @@ const AllMembers = ({ navigation }) => {
                   <View style={styles.userInfo}>
                     <Text style={styles.name}>
                       {item.first_name} {item.last_name}
+                     {""} <Text style={styles.status}>({item.isActive ? "Active":"Inactive"})</Text>
                     </Text>
                     <Text style={styles.demographic}>
                       {item.age} Years Old {item.gender}
