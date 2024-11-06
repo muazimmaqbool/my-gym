@@ -3,9 +3,9 @@ import React from 'react'
 
 const Inventory = () => {
   return (
-    <View>
-      <Text>Inventory</Text>
-    </View>
+    <View style={{flex:1,alignItems:"center",justifyContent:"center"}}>
+    <Text>Coming Soon</Text>
+  </View>
   )
 }
 
