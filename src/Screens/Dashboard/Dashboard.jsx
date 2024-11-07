@@ -10,7 +10,6 @@ const Dashboard = ({ navigation }) => {
   const renderCard = (title, subTitle,icon,navigateTo) => {
     const isDisabled = subTitle === "coming soon";
     return (
-    //  <Pressable disabled={subTitle==="coming soon"} onPress={()=>{navigation.navigate(navigateTo)}}>
       <Pressable onPress={()=>{navigation.navigate(navigateTo)}}>
        <Card.Title
         title={title}
