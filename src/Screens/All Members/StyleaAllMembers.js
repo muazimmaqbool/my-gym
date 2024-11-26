@@ -59,6 +59,9 @@ export const styles=StyleSheet.create({
         fontSize:14,
         fontWeight:"400"
       },
+      noDataContainer:{
+
+      },
       noData:{
         color:"#6B7280CC",
         fontWeight:"500",
