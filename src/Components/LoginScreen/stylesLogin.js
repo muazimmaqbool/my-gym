@@ -41,4 +41,12 @@ export const styles=StyleSheet.create({
         gap:20,
         paddingTop:30,
       },
+      textInput:{
+        width:"100%",
+        height:40,
+        fontSize:16
+      },
+      login:{
+        gap:20,
+      }
 })
