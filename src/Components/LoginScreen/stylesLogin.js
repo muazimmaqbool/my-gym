@@ -6,4 +6,39 @@ export const styles=StyleSheet.create({
         alignItems: "stretch",
         backgroundColor: "#3a86ff",
       },
+      topBar: {
+        height: "25%",
+        alignItems: "flex-start",
+        justifyContent: "space-between",
+        paddingInline:20,
+        paddingBlock:25,
+      },
+      header:{
+        flexDirection:"row",
+        alignItems:"center",
+        width:"100%",
+        justifyContent:"space-between"
+      },
+      title: {
+        fontWeight: "700",
+        color: "#F9FAFB",
+        fontSize: 30,
+        lineHeight:38,
+      },
+      subTitle: {
+        fontWeight: "400",
+        color: "#FFFFFF",
+        fontSize: 16,
+        lineHeight:24
+      },
+      mainView: {
+        flex: 1,
+        backgroundColor: "white",
+        borderTopRightRadius: 50,
+        borderTopLeftRadius: 50,
+        paddingVertical: 20,
+        paddingHorizontal: 30,
+        gap:20,
+        paddingTop:30,
+      },
 })
