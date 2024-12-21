@@ -2,7 +2,7 @@ import { StatusBar, StyleSheet, Text, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import FrontScreen from "./Components/FrontScreen"
+import LoginScreen from "./Components/LoginScreen/Logincreen"
 import SplashScreen from "./Screens/SplashScreen"
 import HomeStack from "../src/Stacks/HomeStack"
 
@@ -38,8 +38,8 @@ const RootStack = () => {
        }}
       />
       <Stack.Screen 
-       name="front"
-       component={FrontScreen}
+       name="loginScreen"
+       component={LoginScreen}
        options={{
          headerShown: false,
        }}

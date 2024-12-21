@@ -109,7 +109,19 @@ const AllMembers = ({ navigation }) => {
               ))}
             </>
           ) : (
-            <Text style={styles.noData}>No Member Found</Text>
+            <View style={styles.noDataContainer}>
+              <Text style={styles.noData}>No Member Found</Text>
+              <Button
+                contentStyle={{ flexDirection: "row-reverse" }}
+                outlineColor="#DBDBDB"
+                textColor="#63676B"
+                mode="outlined"
+                icon="account-plus-outline"
+                onPress={() => navigation.navigate("addMember")}
+              >
+                Add New Member
+              </Button>
+            </View>
           )}
         </View>
       </ScrollView>

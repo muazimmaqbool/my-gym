@@ -20,6 +20,14 @@ export default function SplashScreen({ navigation }) {
       >
         Get Started
       </Button>
+      <Button
+        mode="contained"
+        onPress={() => {
+          navigation.navigate("loginScreen");
+        }}
+      >
+        Login
+      </Button>
     </View>
   );
 }

@@ -59,6 +59,11 @@ export const styles=StyleSheet.create({
         fontSize:14,
         fontWeight:"400"
       },
+      noDataContainer:{
+        justifyContent:"center",
+        alignItems:"center",
+        gap:15,
+      },
       noData:{
         color:"#6B7280CC",
         fontWeight:"500",

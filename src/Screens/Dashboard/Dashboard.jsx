@@ -51,7 +51,7 @@ const Dashboard = ({ navigation }) => {
           {renderCard("Inventory Management","coming soon", "office-building-cog-outline","inventory")}
           {renderCard("Billing and Payments","coming soon", "currency-usd","billings")}
         </ScrollView>
-        <Button
+        {/* <Button
           buttonColor="#3a86ff"
           icon="home"
           mode="contained"
@@ -59,7 +59,7 @@ const Dashboard = ({ navigation }) => {
           onPress={() => navigation.navigate("homeScreen")}
         >
           Return To Home
-        </Button>
+        </Button> */}
       </View>
     </View>
   );
