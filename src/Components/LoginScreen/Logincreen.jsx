@@ -2,16 +2,15 @@ import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { Button } from "react-native-paper";
 
-const FrontScreen = () => {
+const LoginScreen = () => {
   return (
     <View style={styles.container}>
-      <Text>Front Screen</Text>
       
     </View>
   );
 };
 
-export default FrontScreen;
+export default LoginScreen;
 
 const styles = StyleSheet.create({
   container: {
